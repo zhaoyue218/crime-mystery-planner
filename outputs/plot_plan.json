@@ -1,0 +1,342 @@
+{
+  "case_title": "Murder Beneath the Clocktower Snow",
+  "investigator": "Detective Lena Marlowe",
+  "steps": [
+    {
+      "step_id": 1,
+      "phase": "setup",
+      "kind": "discovery",
+      "title": "The Locked Estate",
+      "summary": "Detective Lena Marlowe arrives after the body of Professor Adrian Wren is found and orders the snowbound estate sealed.",
+      "location": "Map room",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Professor Adrian Wren",
+        "Evelyn Cross",
+        "Miles Dorian",
+        "Nora Bell",
+        "Julian Pike"
+      ],
+      "evidence_ids": [],
+      "reveals": [
+        "The suspects cannot leave the estate."
+      ],
+      "timeline_ref": "9:20 PM"
+    },
+    {
+      "step_id": 2,
+      "phase": "setup",
+      "kind": "survey",
+      "title": "Initial Scene Sweep",
+      "summary": "The detective notices the unusual puncture wound and the disturbed display case before ordering toxicology.",
+      "location": "Map room",
+      "participants": [
+        "Detective Lena Marlowe"
+      ],
+      "evidence_ids": [
+        "E3",
+        "E4"
+      ],
+      "reveals": [
+        "The death may not be a natural collapse."
+      ],
+      "timeline_ref": "9:30 PM"
+    },
+    {
+      "step_id": 3,
+      "phase": "setup",
+      "kind": "interview",
+      "title": "Host Under Pressure",
+      "summary": "Evelyn admits the victim planned to make a damaging announcement, exposing a circle of motives.",
+      "location": "West salon",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Evelyn Cross"
+      ],
+      "evidence_ids": [],
+      "reveals": [
+        "The victim intended to accuse someone publicly that night."
+      ],
+      "timeline_ref": "9:45 PM"
+    },
+    {
+      "step_id": 4,
+      "phase": "investigation",
+      "kind": "evidence",
+      "title": "Tea Service Suspicion",
+      "summary": "Nora's fingerprints on the cracked teacup make her the first apparent suspect.",
+      "location": "Lecture antechamber",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Nora Bell"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "reveals": [
+        "Nora handled the victim's last drink."
+      ],
+      "timeline_ref": "10:00 PM"
+    },
+    {
+      "step_id": 5,
+      "phase": "investigation",
+      "kind": "alibi_check",
+      "title": "Archive Alibi Verification",
+      "summary": "A catalog terminal log confirms Nora worked in the archive earlier than claimed but left before the murder window closed.",
+      "location": "Archive room",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Nora Bell"
+      ],
+      "evidence_ids": [],
+      "reveals": [
+        "Nora's alibi is partial and requires more scrutiny."
+      ],
+      "timeline_ref": "10:20 PM"
+    },
+    {
+      "step_id": 6,
+      "phase": "investigation",
+      "kind": "interview",
+      "title": "The Author's Resentment",
+      "summary": "Miles reveals the victim threatened to expose his plagiarism, strengthening motive but not method.",
+      "location": "Observatory",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Miles Dorian"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "reveals": [
+        "Miles had reason to hate the victim."
+      ],
+      "timeline_ref": "10:35 PM"
+    },
+    {
+      "step_id": 7,
+      "phase": "investigation",
+      "kind": "alibi_check",
+      "title": "Observatory Alibi Verification",
+      "summary": "A voice recorder timeline shows Miles stopped dictating before the critical minutes, weakening but not collapsing his alibi.",
+      "location": "Observatory",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Miles Dorian"
+      ],
+      "evidence_ids": [
+        "E6"
+      ],
+      "reveals": [
+        "Miles cannot account for every minute around the murder."
+      ],
+      "timeline_ref": "10:50 PM"
+    },
+    {
+      "step_id": 8,
+      "phase": "investigation",
+      "kind": "red_herring",
+      "title": "Financial Secrets in the Ashes",
+      "summary": "The burned ledger scrap suggests Evelyn hid embezzlement, creating a powerful but misleading murder theory.",
+      "location": "West salon",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Evelyn Cross"
+      ],
+      "evidence_ids": [
+        "E5"
+      ],
+      "reveals": [
+        "Evelyn has a secret unrelated to the killing."
+      ],
+      "timeline_ref": "11:05 PM"
+    },
+    {
+      "step_id": 9,
+      "phase": "investigation",
+      "kind": "forensics",
+      "title": "Poison by Puncture",
+      "summary": "Toxicology rules out poisoned tea and proves the victim was attacked with a digitalis-coated object.",
+      "location": "Improvised lab",
+      "participants": [
+        "Detective Lena Marlowe"
+      ],
+      "evidence_ids": [
+        "E3"
+      ],
+      "reveals": [
+        "The tea-cup theory is false."
+      ],
+      "timeline_ref": "11:25 PM"
+    },
+    {
+      "step_id": 10,
+      "phase": "investigation",
+      "kind": "evidence",
+      "title": "The Missing Minutes",
+      "summary": "Security logs reveal a manual deletion in the east corridor footage during the murder window.",
+      "location": "Security office",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Julian Pike"
+      ],
+      "evidence_ids": [
+        "E2"
+      ],
+      "reveals": [
+        "Someone with security access manipulated the cameras."
+      ],
+      "timeline_ref": "11:40 PM"
+    },
+    {
+      "step_id": 11,
+      "phase": "midpoint",
+      "kind": "interference",
+      "title": "A Witness Is Silenced",
+      "summary": "Before Nora can explain a message she overheard, someone ransacks her desk and removes a note, signaling active interference.",
+      "location": "Archive room",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Nora Bell"
+      ],
+      "evidence_ids": [],
+      "reveals": [
+        "The killer is still shaping the investigation."
+      ],
+      "timeline_ref": "11:55 PM"
+    },
+    {
+      "step_id": 12,
+      "phase": "investigation",
+      "kind": "evidence",
+      "title": "Message to the Map Room",
+      "summary": "A recovered phone extract shows the victim was lured to the map room by a message from Julian's device.",
+      "location": "Guest wing",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Julian Pike"
+      ],
+      "evidence_ids": [
+        "E8"
+      ],
+      "reveals": [
+        "Julian contacted the victim just before the murder."
+      ],
+      "timeline_ref": "12:10 AM"
+    },
+    {
+      "step_id": 13,
+      "phase": "investigation",
+      "kind": "evidence",
+      "title": "Boot Prints Through the Basement",
+      "summary": "Wet boot prints trace a path from the generator control panel toward the east stair, aligning with a staged outage.",
+      "location": "Basement corridor",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Julian Pike"
+      ],
+      "evidence_ids": [
+        "E7",
+        "E9"
+      ],
+      "reveals": [
+        "The generator fault may have been manufactured."
+      ],
+      "timeline_ref": "12:25 AM"
+    },
+    {
+      "step_id": 14,
+      "phase": "reversal",
+      "kind": "analysis",
+      "title": "Red Herring Cleared",
+      "summary": "The detective reconstructs the tea timeline and clears Nora, while Evelyn's fraud is split off as a separate offense.",
+      "location": "Drawing room",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Nora Bell",
+        "Evelyn Cross"
+      ],
+      "evidence_ids": [
+        "E1",
+        "E3",
+        "E5"
+      ],
+      "reveals": [
+        "The real killer relied on the confusion created by side scandals."
+      ],
+      "timeline_ref": "12:45 AM"
+    },
+    {
+      "step_id": 15,
+      "phase": "reversal",
+      "kind": "analysis",
+      "title": "Means, Motive, Opportunity Aligned",
+      "summary": "Julian alone had security access, a reason to stop the victim's revelation, and a route hidden by the outage.",
+      "location": "Drawing room",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Julian Pike"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E7",
+        "E8",
+        "E9"
+      ],
+      "reveals": [
+        "The evidence chain now centers on Julian."
+      ],
+      "timeline_ref": "1:00 AM"
+    },
+    {
+      "step_id": 16,
+      "phase": "climax",
+      "kind": "confrontation",
+      "title": "Confrontation in the Map Room",
+      "summary": "The detective recreates the murder and confronts Julian with the deleted footage, the message extract, the toxin trace, and the staged outage.",
+      "location": "Map room",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Julian Pike",
+        "Evelyn Cross",
+        "Miles Dorian",
+        "Nora Bell"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E8",
+        "E9"
+      ],
+      "reveals": [
+        "Julian's basement alibi collapses under the evidence."
+      ],
+      "timeline_ref": "1:20 AM"
+    },
+    {
+      "step_id": 17,
+      "phase": "resolution",
+      "kind": "confession",
+      "title": "The Hidden Grudge",
+      "summary": "Pressed by the complete chain of evidence, Julian admits he killed the professor before his own fraud could be exposed.",
+      "location": "Map room",
+      "participants": [
+        "Detective Lena Marlowe",
+        "Julian Pike"
+      ],
+      "evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E7",
+        "E8",
+        "E9"
+      ],
+      "reveals": [
+        "The motive and method are fully confirmed."
+      ],
+      "timeline_ref": "1:30 AM"
+    }
+  ]
+}

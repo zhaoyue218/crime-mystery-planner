@@ -1,0 +1,754 @@
+[
+  {
+    "subject": "Murder Beneath the Clocktower Snow",
+    "relation": "set_in",
+    "object": "Blackstone Hall, a snowbound estate converted into a private criminology retreat",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Professor Adrian Wren",
+    "relation": "is_victim",
+    "object": "true",
+    "time": "9:12 PM",
+    "source": "case_bible",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "is_culprit",
+    "object": "true",
+    "time": "9:12 PM",
+    "source": "case_bible",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "has_motive",
+    "object": "The victim was about to reveal Julian had fabricated data in a famous cold case study.",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.99
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "used_method",
+    "object": "Julian disabled the east corridor camera, lured the victim to the map room, then used a puncture device coated with fast-acting digitalis to mimic a sudden collapse.",
+    "time": "9:12 PM",
+    "source": "case_bible",
+    "confidence": 0.99
+  },
+  {
+    "subject": "Evelyn Cross",
+    "relation": "role",
+    "object": "suspect",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Evelyn Cross",
+    "relation": "relationship_to_victim",
+    "object": "host and recent professional rival",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.95
+  },
+  {
+    "subject": "Evelyn Cross",
+    "relation": "means",
+    "object": "Access to the estate's service corridors and maintenance keys.",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.93
+  },
+  {
+    "subject": "Evelyn Cross",
+    "relation": "motive",
+    "object": "Feared exposure of embezzlement tied to retreat funds.",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.9
+  },
+  {
+    "subject": "Evelyn Cross",
+    "relation": "opportunity",
+    "object": "Met the victim shortly before the lights failed.",
+    "time": "9:00 PM-9:15 PM",
+    "source": "case_bible",
+    "confidence": 0.9
+  },
+  {
+    "subject": "Evelyn Cross",
+    "relation": "alibi",
+    "object": "Claims she was greeting donors in the west salon at 9:05 PM.",
+    "time": "9:00 PM-9:15 PM",
+    "source": "case_bible",
+    "confidence": 0.88
+  },
+  {
+    "subject": "Miles Dorian",
+    "relation": "role",
+    "object": "suspect",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Miles Dorian",
+    "relation": "relationship_to_victim",
+    "object": "public adversary",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.95
+  },
+  {
+    "subject": "Miles Dorian",
+    "relation": "means",
+    "object": "Handled rare toxins during research for a previous book.",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.93
+  },
+  {
+    "subject": "Miles Dorian",
+    "relation": "motive",
+    "object": "Wanted to stop the victim from ruining his reputation at the keynote.",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.9
+  },
+  {
+    "subject": "Miles Dorian",
+    "relation": "opportunity",
+    "object": "Was seen near the library corridor ten minutes before the death.",
+    "time": "9:00 PM-9:15 PM",
+    "source": "case_bible",
+    "confidence": 0.9
+  },
+  {
+    "subject": "Miles Dorian",
+    "relation": "alibi",
+    "object": "Says he was recording notes alone in the observatory at 9:10 PM.",
+    "time": "9:00 PM-9:15 PM",
+    "source": "case_bible",
+    "confidence": 0.88
+  },
+  {
+    "subject": "Nora Bell",
+    "relation": "role",
+    "object": "suspect",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Nora Bell",
+    "relation": "relationship_to_victim",
+    "object": "assistant with growing resentment",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.95
+  },
+  {
+    "subject": "Nora Bell",
+    "relation": "means",
+    "object": "Organized the victim's tea service and handled his schedule.",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.93
+  },
+  {
+    "subject": "Nora Bell",
+    "relation": "motive",
+    "object": "Learned that the victim intended to sabotage her fellowship application.",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.9
+  },
+  {
+    "subject": "Nora Bell",
+    "relation": "opportunity",
+    "object": "Delivered the victim's tea before the lecture.",
+    "time": "9:00 PM-9:15 PM",
+    "source": "case_bible",
+    "confidence": 0.9
+  },
+  {
+    "subject": "Nora Bell",
+    "relation": "alibi",
+    "object": "States she stayed in the archive room cataloging papers at 9:00 PM.",
+    "time": "9:00 PM-9:15 PM",
+    "source": "case_bible",
+    "confidence": 0.88
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "role",
+    "object": "culprit",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "relationship_to_victim",
+    "object": "past subject with a hidden grudge",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.95
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "means",
+    "object": "Controlled camera outages and had access to the antique display weapons.",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.93
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "motive",
+    "object": "The victim was about to reveal Julian had fabricated data in a famous cold case study.",
+    "time": null,
+    "source": "case_bible",
+    "confidence": 0.9
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "opportunity",
+    "object": "Used a staged security sweep to move unseen through the east stair.",
+    "time": "9:00 PM-9:15 PM",
+    "source": "case_bible",
+    "confidence": 0.9
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "alibi",
+    "object": "Claims he was resetting a generator fault in the basement at 9:12 PM.",
+    "time": "9:00 PM-9:15 PM",
+    "source": "case_bible",
+    "confidence": 0.88
+  },
+  {
+    "subject": "T1",
+    "relation": "timeline_event",
+    "object": "Guests arrive for the retreat gala while snow closes the access road.",
+    "time": "8:15 PM",
+    "source": "timeline",
+    "confidence": 0.97
+  },
+  {
+    "subject": "Evelyn Cross",
+    "relation": "present_at",
+    "object": "Grand foyer",
+    "time": "8:15 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "Miles Dorian",
+    "relation": "present_at",
+    "object": "Grand foyer",
+    "time": "8:15 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "Nora Bell",
+    "relation": "present_at",
+    "object": "Grand foyer",
+    "time": "8:15 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "present_at",
+    "object": "Grand foyer",
+    "time": "8:15 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "Professor Adrian Wren",
+    "relation": "present_at",
+    "object": "Grand foyer",
+    "time": "8:15 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "T2",
+    "relation": "timeline_event",
+    "object": "The victim privately tells Nora that a public accusation will be made tonight.",
+    "time": "8:40 PM",
+    "source": "timeline",
+    "confidence": 0.97
+  },
+  {
+    "subject": "Professor Adrian Wren",
+    "relation": "present_at",
+    "object": "Archive room",
+    "time": "8:40 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "Nora Bell",
+    "relation": "present_at",
+    "object": "Archive room",
+    "time": "8:40 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "T3",
+    "relation": "timeline_event",
+    "object": "Julian initiates a fake maintenance alert and quietly disables the east corridor camera.",
+    "time": "8:55 PM",
+    "source": "timeline",
+    "confidence": 0.97
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "present_at",
+    "object": "Security office",
+    "time": "8:55 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "T4",
+    "relation": "timeline_event",
+    "object": "Nora delivers tea to the victim, unaware Julian has already tampered with the route.",
+    "time": "9:00 PM",
+    "source": "timeline",
+    "confidence": 0.97
+  },
+  {
+    "subject": "Professor Adrian Wren",
+    "relation": "present_at",
+    "object": "Lecture antechamber",
+    "time": "9:00 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "Nora Bell",
+    "relation": "present_at",
+    "object": "Lecture antechamber",
+    "time": "9:00 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "T5",
+    "relation": "timeline_event",
+    "object": "Julian messages the victim about an urgent discovery in the map room.",
+    "time": "9:08 PM",
+    "source": "timeline",
+    "confidence": 0.97
+  },
+  {
+    "subject": "Professor Adrian Wren",
+    "relation": "present_at",
+    "object": "East corridor",
+    "time": "9:08 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "present_at",
+    "object": "East corridor",
+    "time": "9:08 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "T6",
+    "relation": "timeline_event",
+    "object": "The victim is killed in the map room with a poisoned puncture wound.",
+    "time": "9:12 PM",
+    "source": "timeline",
+    "confidence": 0.97
+  },
+  {
+    "subject": "Professor Adrian Wren",
+    "relation": "present_at",
+    "object": "Map room",
+    "time": "9:12 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "present_at",
+    "object": "Map room",
+    "time": "9:12 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "T7",
+    "relation": "timeline_event",
+    "object": "Julian triggers a brief power fluctuation to scramble witness recollection and coverage.",
+    "time": "9:15 PM",
+    "source": "timeline",
+    "confidence": 0.97
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "present_at",
+    "object": "Basement control panel",
+    "time": "9:15 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "T8",
+    "relation": "timeline_event",
+    "object": "The body is discovered and the estate is locked down.",
+    "time": "9:20 PM",
+    "source": "timeline",
+    "confidence": 0.97
+  },
+  {
+    "subject": "Evelyn Cross",
+    "relation": "present_at",
+    "object": "Map room",
+    "time": "9:20 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "Miles Dorian",
+    "relation": "present_at",
+    "object": "Map room",
+    "time": "9:20 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "Nora Bell",
+    "relation": "present_at",
+    "object": "Map room",
+    "time": "9:20 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "Julian Pike",
+    "relation": "present_at",
+    "object": "Map room",
+    "time": "9:20 PM",
+    "source": "timeline",
+    "confidence": 0.85
+  },
+  {
+    "subject": "E1",
+    "relation": "is_evidence",
+    "object": "Cracked teacup",
+    "time": null,
+    "source": "evidence",
+    "confidence": 1.0
+  },
+  {
+    "subject": "E1",
+    "relation": "found_at",
+    "object": "Lecture antechamber",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.75
+  },
+  {
+    "subject": "E1",
+    "relation": "implicates",
+    "object": "Nora Bell",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.75
+  },
+  {
+    "subject": "E1",
+    "relation": "description",
+    "object": "A teacup bearing Nora's fingerprints but no poison residue.",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.75
+  },
+  {
+    "subject": "E2",
+    "relation": "is_evidence",
+    "object": "Deleted security segment",
+    "time": null,
+    "source": "evidence",
+    "confidence": 1.0
+  },
+  {
+    "subject": "E2",
+    "relation": "found_at",
+    "object": "Security office",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.98
+  },
+  {
+    "subject": "E2",
+    "relation": "implicates",
+    "object": "Julian Pike",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.98
+  },
+  {
+    "subject": "E2",
+    "relation": "description",
+    "object": "A seven-minute gap in east corridor footage manually triggered from the security desk.",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.98
+  },
+  {
+    "subject": "E3",
+    "relation": "is_evidence",
+    "object": "Digitalis trace",
+    "time": null,
+    "source": "evidence",
+    "confidence": 1.0
+  },
+  {
+    "subject": "E3",
+    "relation": "found_at",
+    "object": "Victim's clothing",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.94
+  },
+  {
+    "subject": "E3",
+    "relation": "implicates",
+    "object": "Julian Pike",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.94
+  },
+  {
+    "subject": "E3",
+    "relation": "description",
+    "object": "A toxicology trace on the victim's collar consistent with digitalis delivery by puncture.",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.94
+  },
+  {
+    "subject": "E4",
+    "relation": "is_evidence",
+    "object": "Missing display spike",
+    "time": null,
+    "source": "evidence",
+    "confidence": 1.0
+  },
+  {
+    "subject": "E4",
+    "relation": "found_at",
+    "object": "Map room display",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.88
+  },
+  {
+    "subject": "E4",
+    "relation": "implicates",
+    "object": "Julian Pike",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.88
+  },
+  {
+    "subject": "E4",
+    "relation": "description",
+    "object": "A display label from an antique navigation spike case now missing one item.",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.88
+  },
+  {
+    "subject": "E5",
+    "relation": "is_evidence",
+    "object": "Burned ledger scrap",
+    "time": null,
+    "source": "evidence",
+    "confidence": 1.0
+  },
+  {
+    "subject": "E5",
+    "relation": "found_at",
+    "object": "Fireplace grate",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.67
+  },
+  {
+    "subject": "E5",
+    "relation": "implicates",
+    "object": "Evelyn Cross",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.67
+  },
+  {
+    "subject": "E5",
+    "relation": "description",
+    "object": "A scrap from the retreat accounts suggesting Evelyn hid expenses.",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.67
+  },
+  {
+    "subject": "E6",
+    "relation": "is_evidence",
+    "object": "Unsigned apology draft",
+    "time": null,
+    "source": "evidence",
+    "confidence": 1.0
+  },
+  {
+    "subject": "E6",
+    "relation": "found_at",
+    "object": "Observatory desk",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.71
+  },
+  {
+    "subject": "E6",
+    "relation": "implicates",
+    "object": "Miles Dorian",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.71
+  },
+  {
+    "subject": "E6",
+    "relation": "description",
+    "object": "A draft apology in Miles's notebook after the victim threatened exposure.",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.71
+  },
+  {
+    "subject": "E7",
+    "relation": "is_evidence",
+    "object": "Basement boot print",
+    "time": null,
+    "source": "evidence",
+    "confidence": 1.0
+  },
+  {
+    "subject": "E7",
+    "relation": "found_at",
+    "object": "Basement corridor",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.91
+  },
+  {
+    "subject": "E7",
+    "relation": "implicates",
+    "object": "Julian Pike",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.91
+  },
+  {
+    "subject": "E7",
+    "relation": "description",
+    "object": "Wet tread marks matching Julian's boots lead from the control panel toward the east stair.",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.91
+  },
+  {
+    "subject": "E8",
+    "relation": "is_evidence",
+    "object": "Phone message extract",
+    "time": null,
+    "source": "evidence",
+    "confidence": 1.0
+  },
+  {
+    "subject": "E8",
+    "relation": "found_at",
+    "object": "Victim's phone",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.97
+  },
+  {
+    "subject": "E8",
+    "relation": "implicates",
+    "object": "Julian Pike",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.97
+  },
+  {
+    "subject": "E8",
+    "relation": "description",
+    "object": "A recovered message summoning the victim to the map room from Julian's device.",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.97
+  },
+  {
+    "subject": "E9",
+    "relation": "is_evidence",
+    "object": "Cut generator wire",
+    "time": null,
+    "source": "evidence",
+    "confidence": 1.0
+  },
+  {
+    "subject": "E9",
+    "relation": "found_at",
+    "object": "Generator housing",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.89
+  },
+  {
+    "subject": "E9",
+    "relation": "implicates",
+    "object": "Julian Pike",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.89
+  },
+  {
+    "subject": "E9",
+    "relation": "description",
+    "object": "A deliberately nicked wire that caused the brief outage used to support Julian's alibi.",
+    "time": null,
+    "source": "evidence",
+    "confidence": 0.89
+  },
+  {
+    "subject": "Nora Bell",
+    "relation": "red_herring_explained_by",
+    "object": "Nora appears suspicious because she served the victim's tea, but the poison was not ingested.",
+    "time": null,
+    "source": "red_herring",
+    "confidence": 0.82
+  },
+  {
+    "subject": "Evelyn Cross",
+    "relation": "red_herring_explained_by",
+    "object": "Evelyn hid financial fraud, giving her motive to lie, but that misconduct is separate from the murder.",
+    "time": null,
+    "source": "red_herring",
+    "confidence": 0.82
+  }
+]
