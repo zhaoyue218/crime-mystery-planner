@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from pathlib import Path
 from random import Random
 
 from llm_interface import LLMBackend
@@ -10,10 +11,11 @@ class CaseBibleGenerator:
     def __init__(self, llm: LLMBackend, seed: int = 11) -> None:
         self.llm = llm
         self.rng = Random(seed)
+        self.setting_file = Path(__file__).with_name("setting.txt")
 
     def generate(self) -> CaseBible:
         title = self.llm.generate("Generate a mystery title").text
-        setting = self.llm.generate("Generate a mystery setting").text
+        setting = self.setting_file.read_text(encoding="utf-8").strip()
 
         victim = Character(
             name="Professor Adrian Wren",

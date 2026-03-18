@@ -6,7 +6,7 @@ from pathlib import Path
 
 from builders.fact_graph_builder import FactGraphBuilder
 from generators.case_bible_generator import CaseBibleGenerator
-from llm_interface import MockLLMBackend
+from llm_interface import GeminiLLMBackend, MockLLMBackend
 from models import PlotPlan, ValidationReport
 from planners.plot_planner import PlotPlanner
 from realization.story_realizer import StoryRealizer
@@ -18,13 +18,14 @@ class CrimeMysteryPipeline:
     def __init__(self, output_dir: str = "outputs", seed: int = 7) -> None:
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
-        llm = MockLLMBackend(seed=seed)
-        self.case_generator = CaseBibleGenerator(llm=llm, seed=seed + 1)
+        self.mock_llm = MockLLMBackend(seed=seed)
+        self.gemini_llm = GeminiLLMBackend()
+        self.case_generator = CaseBibleGenerator(llm=self.mock_llm, seed=seed + 1)
         self.fact_builder = FactGraphBuilder()
         self.plot_planner = PlotPlanner()
         self.validator = PlotPlanValidator()
         self.repair_operator = PlotPlanRepairOperator()
-        self.story_realizer = StoryRealizer(llm=llm)
+        self.story_realizer = StoryRealizer(llm=self.gemini_llm)
 
     def run(self) -> dict[str, object]:
         case_bible = self.case_generator.generate()

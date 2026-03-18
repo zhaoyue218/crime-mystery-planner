@@ -1,6 +1,6 @@
 {
   "title": "Murder Beneath the Clocktower Snow",
-  "setting": "Blackstone Hall, a snowbound estate converted into a private criminology retreat",
+  "setting": "A classic closed-circle manor mystery set in rural England in the late 1920s. On a stormy autumn evening, a select group of guests has gathered at an old country estate for a formal masquerade and private supper. By nightfall, the roads are flooded, the grounds are impassable, and the household is sealed off from the outside world until morning.\n\nThe story should feel like a traditional fair-play whodunit: atmospheric, elegant, and deduction-centered. It must be historically and technologically consistent with the late 1920s. No modern communications, digital devices, surveillance systems, database searches, or advanced forensic procedures may be used. The mystery must unfold through interviews, conflicting testimony, timing discrepancies, room access, physical traces, written documents, household objects, and careful reasoning.\n\nThe estate should provide a rich but finite investigative space, including rooms such as a library, study, ballroom, conservatory, dining room, guest wing, servant corridors, and private chambers. The characters should be socially plausible for the period and setting: aristocratic family members, family friends, staff, professional associates, or dependents, each carrying secrets, anxieties, and conflicting interests. Themes may include inheritance, scandal, debt, blackmail, jealousy, class tension, and fear of public disgrace.\n\nThe crime should be designed as a layered but fair mystery with one true culprit, one victim, at least four serious suspects, at least eight evidence items, at least one red herring arc, at least two alibi checks, and at least one deliberate attempt to mislead the investigation. The hidden truth must support a long-form investigation with at least fifteen substantial plot beats, culminating in a final confrontation grounded in a clear and coherent chain of evidence.",
   "victim": {
     "name": "Professor Adrian Wren",
     "role": "victim",
@@ -267,5 +267,5 @@
     "E7",
     "E9"
   ],
-  "notes": "Every polished alibi cracked once the evidence was forced into sequence."
+  "notes": "The truth surfaced only when the smallest contradiction stopped looking small."
 }

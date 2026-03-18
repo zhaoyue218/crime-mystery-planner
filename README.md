@@ -124,7 +124,8 @@ main.py 打印摘要信息
 - 命令行参数 `--output-dir`
 - 命令行参数 `--seed`
 - 代码中内置的模板化案件素材
-- mock LLM 返回的少量文本片段
+- 外部 `generators/setting.txt` 文件中的设定文本
+- Mock / Gemini backend 返回的文本片段
 
 这意味着当前系统更像一个**内置案例生成器**，而不是一个接受任意用户设定的通用系统。
 
@@ -188,6 +189,7 @@ main.py 打印摘要信息
 ├── builders/
 │   └── fact_graph_builder.py
 ├── generators/
+│   ├── setting.txt
 │   └── case_bible_generator.py
 ├── planners/
 │   └── plot_planner.py
@@ -234,14 +236,14 @@ main.py 打印摘要信息
 ### `llm_interface.py`
 
 - 定义 LLM 抽象接口 `LLMBackend`
-- 提供默认实现 `MockLLMBackend`
-- 当前项目中没有真实 API 调用，全部走 mock
+- 提供 `MockLLMBackend` 与 `GeminiLLMBackend`
+- 当前项目已经支持真实 Gemini API 调用
 
 ### `generators/case_bible_generator.py`
 
 - 负责生成隐藏案件真相
 - 输出的是 `CaseBible`
-- 这里的案件素材基本是硬编码 + 少量 mock LLM 文本拼接
+- 这里的案件素材基本是硬编码 + 少量 LLM 文本 + 外部 `setting.txt` 文件
 
 ### `builders/fact_graph_builder.py`
 
@@ -268,7 +270,9 @@ main.py 打印摘要信息
 ### `realization/story_realizer.py`
 
 - 负责把结构化调查步骤展开为最终故事文本
-- 当前实现比较朴素，本质上是把步骤逐个串成段落
+- 当前实现会根据 backend 分流：
+- Mock 路径保持较简单的结构拼接
+- Gemini 路径会把结构化内容整理成 prompt，再由 LLM 生成更自然的故事文本
 
 ### `outputs/`
 
@@ -561,7 +565,7 @@ main.py 打印摘要信息
 ### 主要职责
 
 - 定义语言模型接口抽象
-- 提供默认的 mock 后端
+- 提供 mock 后端和 Gemini 后端
 
 ### 关键类
 
@@ -579,6 +583,12 @@ main.py 打印摘要信息
 - 使用 `random.Random(seed)` 做可复现的随机选择
 - 根据 prompt 中是否包含 `title`、`setting`、`story` 等关键词选择模板文本
 
+#### `GeminiLLMBackend`
+
+- 通过 HTTP 请求调用 Gemini `generateContent` 接口
+- 对外接口仍然保持 `generate(prompt: str) -> LLMResponse`
+- 内部负责组装请求、发送请求、解析返回 JSON、提取文本
+
 ### 输入是什么
 
 - 输入是 prompt 字符串
@@ -589,8 +599,8 @@ main.py 打印摘要信息
 
 ### 内部核心逻辑
 
-- 并不调用任何外部 API
-- 只是在几个候选句子中随机选一个
+- `MockLLMBackend` 不调用外部 API，只是在候选句子中随机选一个
+- `GeminiLLMBackend` 会调用真实 Gemini API，并把返回结果统一包装成 `LLMResponse`
 
 ### 它依赖哪些模块
 
@@ -598,20 +608,23 @@ main.py 打印摘要信息
 
 ### 它被哪些模块调用
 
-- `CaseBibleGenerator` 使用它生成标题、设定、notes
-- `StoryRealizer` 使用它生成结尾风格句
-- `pipeline.py` 负责实例化它
+- `CaseBibleGenerator` 当前使用传入的 backend 生成标题和 `notes`
+- `StoryRealizer` 会根据传入 backend 类型决定走 mock realization 还是 Gemini realization
+- `pipeline.py` 当前会同时实例化 `MockLLMBackend` 和 `GeminiLLMBackend`
 
 ### 在整个系统中的位置
 
-- 它是“语言生成能力”的最小占位层
-- 目前非常简化，但架构上已经预留了替换空间
+- 它是统一的 LLM 接口层
+- 当前已经同时支持本地 mock 和真实 Gemini
 
 ### 明确的局限性
 
 - 现在的 mock 不是语义生成，而是模板选择
 - prompt 理解极弱，只按关键词路由
 - 不能根据案件上下文动态生成更细致内容
+- Gemini backend 虽然接入了真实 API，但仍然是最小实现：
+- 只支持基础单轮文本请求
+- 没有重试、限流、配置分层或复杂参数管理
 
 ---
 
@@ -642,7 +655,7 @@ main.py 打印摘要信息
 它做了几件事：
 
 1. 用 LLM 生成标题
-2. 用 LLM 生成设定
+2. 从外部文件 `generators/setting.txt` 读取设定
 3. 手工定义受害者
 4. 手工定义四个角色，其中最后一个 `Julian Pike` 同时扮演 culprit
 5. 从 culprit 身上提取案件总体动机 `motive`
@@ -674,6 +687,7 @@ main.py 打印摘要信息
 - 嫌疑人不是动态采样出来的，而是直接写死
 - 时间线不是推理得到的，而是直接写死
 - 证据链不是从事实中自动发现的，而是直接列出
+- 设定文本也不是动态生成，而是从外部 txt 文件读取
 
 这并不影响课程项目价值，但需要诚实认识：
 **当前 Case Bible 更像“程序化构造”而非真正自由生成”。**
@@ -978,7 +992,18 @@ issue_codes = {issue.code for issue in report.issues}
 
 ### 内部核心逻辑
 
-分成三部分：
+`realize()` 现在会先根据 backend 类型分流：
+
+- 如果传入的是 `MockLLMBackend`，走 `_realize_with_mock()`
+- 如果传入的是 `GeminiLLMBackend`，走 `_realize_with_gemini()`
+- 其他 backend 默认回退到 mock 风格实现
+
+其中：
+
+- `_realize_with_mock()` 基本保留原先实现，按开头、步骤段落、结尾串接成文本
+- `_realize_with_gemini()` 会把 `CaseBible` 关键信息和 `PlotPlan` 中的每个 step 压缩成结构化文本，再交给 Gemini 生成更自然的故事
+
+Mock 路径分成三部分：
 
 1. 开头  
    使用案件标题、设定、受害者和侦探名字写开场
@@ -1012,9 +1037,9 @@ issue_codes = {issue.code for issue in report.issues}
 
 ### 当前实现的风格和局限
 
-- 当前实现非常直接
-- 更接近“结构化剧情说明文本”
-- 而不是高度文学化的推理小说写作
+- 当前实现分成两条路径：
+- Mock 路径非常直接，更接近“结构化剧情说明文本”
+- Gemini 路径会更像自然故事，但仍然严格依赖已有结构化内容和 prompt 约束
 
 也就是说，realizer 的重点是：
 
@@ -1043,17 +1068,23 @@ issue_codes = {issue.code for issue in report.issues}
 
 1. 记录输出目录
 2. 确保输出目录存在
-3. 创建 `MockLLMBackend`
-4. 创建所有业务组件：
-   - `CaseBibleGenerator`
+3. 创建 `self.mock_llm = MockLLMBackend(seed=seed)`
+4. 创建 `self.gemini_llm = GeminiLLMBackend()`
+5. 创建所有业务组件：
+   - `CaseBibleGenerator(llm=self.mock_llm, ...)`
    - `FactGraphBuilder`
    - `PlotPlanner`
    - `PlotPlanValidator`
    - `PlotPlanRepairOperator`
-   - `StoryRealizer`
+   - `StoryRealizer(llm=self.gemini_llm)`
 
 这里体现了一个很明确的设计：  
 **pipeline 只负责组织对象，不把业务逻辑揉在一起。**
+
+根据当前实现，pipeline 现在采用的是混合 backend 策略：
+
+- `CaseBibleGenerator` 使用 `MockLLMBackend`
+- `StoryRealizer` 使用 `GeminiLLMBackend`
 
 ### `run()` 做了什么
 
@@ -1174,18 +1205,20 @@ pipeline = CrimeMysteryPipeline(output_dir=args.output_dir, seed=args.seed)
 在 `__init__()` 中：
 
 1. 创建输出目录 `outputs/`
-2. 创建 `MockLLMBackend(seed=7)`
-3. 创建 `CaseBibleGenerator(llm=llm, seed=8)`
-4. 创建 `FactGraphBuilder()`
-5. 创建 `PlotPlanner()`
-6. 创建 `PlotPlanValidator()`
-7. 创建 `PlotPlanRepairOperator()`
-8. 创建 `StoryRealizer(llm=llm)`
+2. 创建 `self.mock_llm = MockLLMBackend(seed=7)`
+3. 创建 `self.gemini_llm = GeminiLLMBackend()`
+4. 创建 `CaseBibleGenerator(llm=self.mock_llm, seed=8)`
+5. 创建 `FactGraphBuilder()`
+6. 创建 `PlotPlanner()`
+7. 创建 `PlotPlanValidator()`
+8. 创建 `PlotPlanRepairOperator()`
+9. 创建 `StoryRealizer(llm=self.gemini_llm)`
 
 注意：
 
 - generator 使用的是 `seed + 1`
-- mock LLM 和 case generator 的随机源并不完全相同
+- `CaseBibleGenerator` 当前使用 mock backend
+- `StoryRealizer` 当前使用 Gemini backend
 
 ### 第 5 步：执行 `pipeline.run()`
 
@@ -1206,7 +1239,7 @@ case_bible = self.case_generator.generate()
 这一步会：
 
 - 用 mock LLM 生成标题
-- 用 mock LLM 生成设定
+- 从 `generators/setting.txt` 读取设定
 - 构造受害者 `Professor Adrian Wren`
 - 构造四名核心角色
 - 指定 `Julian Pike` 为 culprit
@@ -1214,6 +1247,7 @@ case_bible = self.case_generator.generate()
 - 构造 9 个证据
 - 构造 2 个红鲱鱼
 - 构造关键证据链
+- 用 mock LLM 生成 `notes`
 - 返回 `CaseBible`
 
 此时系统拿到的是“完整真相层”。
@@ -1309,11 +1343,11 @@ story_text = self.story_realizer.realize(case_bible, final_plot_plan)
 
 这一步：
 
-- 读取标题和设定
-- 写开头
-- 遍历全部 17 个 `PlotStep`
-- 每步生成一个段落
-- 最后写收束段和结尾句
+- 当前会进入 `StoryRealizer` 的 Gemini 分支
+- 先整理 `CaseBible` 关键信息
+- 再整理全部 `PlotStep`
+- 把这些结构化内容拼成 prompt 发给 Gemini
+- 由 Gemini 返回更自然的故事文本
 
 生成结果保存到：
 
@@ -1540,29 +1574,37 @@ repair 的策略是“按失败原因补齐”。
 它定义了两层东西：
 
 1. 抽象接口 `LLMBackend`
-2. 默认实现 `MockLLMBackend`
+2. 具体实现 `MockLLMBackend` 与 `GeminiLLMBackend`
 
 抽象接口的意义是：
 
 - 项目其他地方只依赖 `generate(prompt)` 这个统一接口
 - 不关心底层到底是真实 API 还是 mock
 
-## 9.2 mock backend 在项目里扮演什么角色
+## 9.2 Mock 与 Gemini backend 在项目里扮演什么角色
 
-mock backend 的作用有三点：
+当前项目里的两个 backend 分工如下：
+
+- `MockLLMBackend`
+  - 负责低成本、可复现的轻量文本生成
+  - 当前主要用于 `CaseBibleGenerator` 的标题和 `notes`
+- `GeminiLLMBackend`
+  - 负责真实大模型生成
+  - 当前主要用于 `StoryRealizer` 的最终故事生成
+
+mock backend 的作用仍然有三点：
 
 1. 保证项目无外部依赖即可运行
 2. 保证课程演示时可复现
 3. 提供少量“像 LLM 输出”的文本变化
 
-它当前用于生成：
+它当前主要用于生成：
 
 - 标题
-- 设定
 - notes
-- 故事收尾句
+- 以及保留一条简单的 mock realization 路径
 
-## 9.3 为什么默认不依赖真实 API
+## 9.3 为什么项目里仍然保留 mock backend
 
 从课程项目角度，这么设计有几个现实优势：
 
@@ -1570,7 +1612,9 @@ mock backend 的作用有三点：
 - 不需要联网
 - 不受配额和费用影响
 - 运行结果更稳定可复现
-- 更方便老师或同学直接运行
+- 更方便老师或同学直接运行 mock 路径
+
+但要注意：根据当前 `pipeline.py` 的实现，项目完整运行已经会调用 `GeminiLLMBackend`，因此默认不再是纯 mock 模式。
 
 ## 9.4 如果将来要替换成真实大模型接口，应该改哪里
 
@@ -1578,27 +1622,29 @@ mock backend 的作用有三点：
 
 1. 在 `llm_interface.py` 中新增一个真实后端类，例如 `OpenAILLMBackend`
 2. 实现 `generate(prompt: str) -> LLMResponse`
-3. 在 `pipeline.py` 中把：
-
-```python
-llm = MockLLMBackend(seed=seed)
-```
-
-替换为真实后端实例
+3. 在 `pipeline.py` 中调整不同模块绑定哪个 backend
 
 理想情况下，还可以进一步：
 
 - 把模型名、温度、API key 等做成配置
+- 去掉 `GeminiLLMBackend` 中当前写死的默认 key，改成环境变量或配置文件
 - 让 `CaseBibleGenerator` 和 `StoryRealizer` 使用更结构化 prompt
 - 让 planner 或 repair 也能部分使用真实 LLM
 
-## 9.5 当前 mock 机制的真实局限
+## 9.5 当前实现的真实局限
 
 - 它不理解上下文
 - 它不对案件内部逻辑做真正生成
 - 它只对少数 prompt 关键词做模板路由
 
-因此当前项目中的“LLM 成分”是存在的，但仍然很轻。
+此外，Gemini 部分虽然已经接入真实 API，但仍然是最小实现：
+
+- 没有重试和容错策略
+- 没有请求参数配置层
+- 没有 token / 成本控制
+- 没有结构化输出约束
+
+因此当前项目中的“LLM 成分”比最初版本更强，但整体仍然属于轻量接入。
 
 ---
 
@@ -1700,17 +1746,18 @@ llm = MockLLMBackend(seed=seed)
 - 但不一定让故事更自然
 - 面对复杂失配情况时能力有限
 
-## 11.5 story realizer 比较朴素
+## 11.5 story realizer 仍然偏轻量
 
-- 文风偏说明式
-- 没有更复杂的场景描写、人物语气、节奏控制
-- 更像“把 plot plan 线性展开”
+- Mock 路径仍然偏说明式
+- Gemini 路径虽然更自然，但依然高度依赖 prompt 和已有结构化输入
+- 两条路径都还没有更细的章节控制、人物 voice 建模或多轮重写机制
 
-## 11.6 mock LLM 很轻量
+## 11.6 当前 LLM 集成仍然比较轻量
 
 - 没有真正语义生成
-- 只是模板选句
-- 无法体现真实大模型在创意生成上的上限
+- mock 部分仍然只是模板选句
+- Gemini 目前主要只用于 story realization
+- 还没有把真实 LLM 深度用于案件建模、剧情规划和修复
 
 ## 11.7 缺少更多开发辅助设施
 
@@ -1728,7 +1775,7 @@ llm = MockLLMBackend(seed=seed)
 
 可继续增强的方向包括：
 
-- 让 `CaseBibleGenerator` 接受外部设定输入
+- 让 `CaseBibleGenerator` 不只读取单个 `setting.txt`，而是支持多份设定文件或用户输入设定
 - 让 fact graph 驱动 planner，而不是只做保存
 - 用真实 LLM 生成多个候选 plot plan
 - 用 validator + repair 做迭代式优化
@@ -1840,20 +1887,24 @@ python main.py --output-dir outputs --seed 7
 参数说明：
 
 - `--output-dir`：输出目录
-- `--seed`：控制 mock 生成的随机种子
+- `--seed`：控制 `MockLLMBackend` 的随机种子
 
 ### 13.4 配置要求
 
-当前没有额外配置文件，也不需要 API key。
+当前没有额外配置文件，但按当前实现需要注意两件事：
 
-### 13.5 是否默认是 mock mode
+- `CaseBibleGenerator` 会读取 `generators/setting.txt`
+- `StoryRealizer` 默认使用 `GeminiLLMBackend`，因此完整运行需要可用的 Gemini API 调用条件
+- 根据当前代码，`GeminiLLMBackend` 里还保留了一个默认 API key 参数；从工程实践上更推荐后续改成环境变量或独立配置
 
-是的。  
-当前实现默认始终使用：
+### 13.5 当前默认运行模式
 
-- `MockLLMBackend`
+当前实现是混合模式：
 
-项目不会调用真实外部大模型接口。
+- `CaseBibleGenerator` 默认使用 `MockLLMBackend`
+- `StoryRealizer` 默认使用 `GeminiLLMBackend`
+
+因此项目已经会调用真实外部大模型接口，并不是纯 mock 模式。
 
 ---
 
