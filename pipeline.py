@@ -20,7 +20,7 @@ class CrimeMysteryPipeline:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.mock_llm = MockLLMBackend(seed=seed)
         self.gemini_llm = GeminiLLMBackend()
-        self.case_generator = CaseBibleGenerator(llm=self.mock_llm, seed=seed + 1)
+        self.case_generator = CaseBibleGenerator(llm=self.gemini_llm, seed=seed + 1)
         self.fact_builder = FactGraphBuilder()
         self.plot_planner = PlotPlanner()
         self.validator = PlotPlanValidator()

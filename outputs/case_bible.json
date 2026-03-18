@@ -1,271 +1,288 @@
 {
-  "title": "Murder Beneath the Clocktower Snow",
   "setting": "A classic closed-circle manor mystery set in rural England in the late 1920s. On a stormy autumn evening, a select group of guests has gathered at an old country estate for a formal masquerade and private supper. By nightfall, the roads are flooded, the grounds are impassable, and the household is sealed off from the outside world until morning.\n\nThe story should feel like a traditional fair-play whodunit: atmospheric, elegant, and deduction-centered. It must be historically and technologically consistent with the late 1920s. No modern communications, digital devices, surveillance systems, database searches, or advanced forensic procedures may be used. The mystery must unfold through interviews, conflicting testimony, timing discrepancies, room access, physical traces, written documents, household objects, and careful reasoning.\n\nThe estate should provide a rich but finite investigative space, including rooms such as a library, study, ballroom, conservatory, dining room, guest wing, servant corridors, and private chambers. The characters should be socially plausible for the period and setting: aristocratic family members, family friends, staff, professional associates, or dependents, each carrying secrets, anxieties, and conflicting interests. Themes may include inheritance, scandal, debt, blackmail, jealousy, class tension, and fear of public disgrace.\n\nThe crime should be designed as a layered but fair mystery with one true culprit, one victim, at least four serious suspects, at least eight evidence items, at least one red herring arc, at least two alibi checks, and at least one deliberate attempt to mislead the investigation. The hidden truth must support a long-form investigation with at least fifteen substantial plot beats, culminating in a final confrontation grounded in a clear and coherent chain of evidence.",
   "victim": {
-    "name": "Professor Adrian Wren",
+    "name": "Sir Alistair Thorne",
     "role": "victim",
-    "description": "A celebrated criminologist who planned to expose fraud at the retreat.",
-    "relationship_to_victim": "self",
-    "means": "n/a",
-    "motive": "n/a",
-    "opportunity": "n/a",
-    "alibi": "n/a"
+    "description": "A 65-year-old shipping magnate known for his ruthless business tactics and massive wealth. He was found slumped over his desk in the library.",
+    "relationship_to_victim": "Self",
+    "means": "N/A",
+    "motive": "N/A",
+    "opportunity": "N/A",
+    "alibi": "N/A"
   },
   "culprit": {
-    "name": "Julian Pike",
+    "name": "Evelyn Vance",
     "role": "culprit",
-    "description": "The estate's head of security and the victim's former research subject.",
-    "relationship_to_victim": "past subject with a hidden grudge",
-    "means": "Controlled camera outages and had access to the antique display weapons.",
-    "motive": "The victim was about to reveal Julian had fabricated data in a famous cold case study.",
-    "opportunity": "Used a staged security sweep to move unseen through the east stair.",
-    "alibi": "Claims he was resetting a generator fault in the basement at 9:12 PM."
+    "description": "Sir Alistair's niece, a quiet young woman who recently returned from studying botany in Switzerland. She lost her inheritance when Alistair ruined her father's firm.",
+    "relationship_to_victim": "Niece and ward",
+    "means": "Knowledge of toxins and access to her late father's chemical supplies.",
+    "motive": "Revenge for her father's financial ruin and subsequent suicide, orchestrated by Alistair.",
+    "opportunity": "Entered the library at 21:30 under the guise of bringing Alistair his evening port.",
+    "alibi": "Claims she was in the conservatory reading a book on orchids from 21:00 until 22:30."
   },
   "suspects": [
     {
-      "name": "Evelyn Cross",
-      "role": "suspect",
-      "description": "The retreat director whose finances depend on the professor's endorsement.",
-      "relationship_to_victim": "host and recent professional rival",
-      "means": "Access to the estate's service corridors and maintenance keys.",
-      "motive": "Feared exposure of embezzlement tied to retreat funds.",
-      "opportunity": "Met the victim shortly before the lights failed.",
-      "alibi": "Claims she was greeting donors in the west salon at 9:05 PM."
-    },
-    {
-      "name": "Miles Dorian",
-      "role": "suspect",
-      "description": "A bestselling true-crime author accused by the victim of plagiarism.",
-      "relationship_to_victim": "public adversary",
-      "means": "Handled rare toxins during research for a previous book.",
-      "motive": "Wanted to stop the victim from ruining his reputation at the keynote.",
-      "opportunity": "Was seen near the library corridor ten minutes before the death.",
-      "alibi": "Says he was recording notes alone in the observatory at 9:10 PM."
-    },
-    {
-      "name": "Nora Bell",
-      "role": "suspect",
-      "description": "The victim's graduate assistant who depended on him for recommendation letters.",
-      "relationship_to_victim": "assistant with growing resentment",
-      "means": "Organized the victim's tea service and handled his schedule.",
-      "motive": "Learned that the victim intended to sabotage her fellowship application.",
-      "opportunity": "Delivered the victim's tea before the lecture.",
-      "alibi": "States she stayed in the archive room cataloging papers at 9:00 PM."
-    },
-    {
-      "name": "Julian Pike",
+      "name": "Evelyn Vance",
       "role": "culprit",
-      "description": "The estate's head of security and the victim's former research subject.",
-      "relationship_to_victim": "past subject with a hidden grudge",
-      "means": "Controlled camera outages and had access to the antique display weapons.",
-      "motive": "The victim was about to reveal Julian had fabricated data in a famous cold case study.",
-      "opportunity": "Used a staged security sweep to move unseen through the east stair.",
-      "alibi": "Claims he was resetting a generator fault in the basement at 9:12 PM."
+      "description": "Sir Alistair's niece, a quiet young woman who recently returned from studying botany in Switzerland. She lost her inheritance when Alistair ruined her father's firm.",
+      "relationship_to_victim": "Niece and ward",
+      "means": "Knowledge of toxins and access to her late father's chemical supplies.",
+      "motive": "Revenge for her father's financial ruin and subsequent suicide, orchestrated by Alistair.",
+      "opportunity": "Entered the library at 21:30 under the guise of bringing Alistair his evening port.",
+      "alibi": "Claims she was in the conservatory reading a book on orchids from 21:00 until 22:30."
+    },
+    {
+      "name": "Major Julian Sterling",
+      "role": "suspect",
+      "description": "A retired army officer and long-time friend of the victim. He is an avid gambler who has recently suffered devastating losses.",
+      "relationship_to_victim": "Close friend and business associate",
+      "means": "A heavy brass paperweight located on the library desk.",
+      "motive": "Alistair refused to bail him out of his massive gambling debts and threatened to inform the War Office.",
+      "opportunity": "Slipped into the library at 22:00 to plead for a loan; found Alistair already dead and stole a promissory note.",
+      "alibi": "Claims he was in the billiard room alone practicing his trick shots from 21:30 to 22:15."
+    },
+    {
+      "name": "Eleanor Thorne",
+      "role": "suspect",
+      "description": "Alistair\u2019s second wife, thirty years his junior. She is known for her expensive tastes and a cold, calculating demeanor.",
+      "relationship_to_victim": "Wife",
+      "means": "Access to Alistair's heart medication, which could be lethal in high doses.",
+      "motive": "She discovered Alistair was planning to divorce her for her infidelity, which would leave her penniless.",
+      "opportunity": "Attempted to enter the library at 21:15 but was turned away by Alistair through the locked door.",
+      "alibi": "Claims she retired to her chambers with a migraine at 21:00 and did not leave until the body was found."
+    },
+    {
+      "name": "Arthur Penhaligon",
+      "role": "suspect",
+      "description": "The private secretary. A nervous, meticulous man who has been managing Alistair\u2019s personal ledgers for a decade.",
+      "relationship_to_victim": "Employee",
+      "means": "Strangulation using his silk necktie.",
+      "motive": "Alistair discovered Arthur had been embezzling funds and was planning to turn him over to the police that evening.",
+      "opportunity": "Had keys to the servant's entrance of the library and was seen arguing with Alistair earlier in the night.",
+      "alibi": "Claims he was in the small study typing letters for the morning post from 21:00 to 23:00."
     }
   ],
-  "motive": "The victim was about to reveal Julian had fabricated data in a famous cold case study.",
-  "method": "Julian disabled the east corridor camera, lured the victim to the map room, then used a puncture device coated with fast-acting digitalis to mimic a sudden collapse.",
+  "motive": "Evelyn sought retribution for the systematic destruction of her father's reputation and life by Alistair Thorne. She waited for the masquerade, knowing the chaos and costumes would provide cover for her movements.",
+  "method": "Potassium cyanide poisoning. Evelyn substituted Alistair's nightly glass of vintage port with a pre-poisoned glass she brought under her harlequin cloak.",
   "true_timeline": [
     {
-      "event_id": "T1",
-      "time_marker": "8:15 PM",
-      "summary": "Guests arrive for the retreat gala while snow closes the access road.",
+      "event_id": "T01",
+      "time_marker": "19:30",
+      "summary": "Supper begins. Sir Alistair publicly berates Arthur Penhaligon for a 'discrepancy' in the accounts.",
       "participants": [
-        "Evelyn Cross",
-        "Miles Dorian",
-        "Nora Bell",
-        "Julian Pike",
-        "Professor Adrian Wren"
+        "Sir Alistair Thorne",
+        "Arthur Penhaligon",
+        "Evelyn Vance",
+        "Eleanor Thorne",
+        "Major Julian Sterling"
       ],
-      "location": "Grand foyer",
+      "location": "Dining Room",
       "public": true
     },
     {
-      "event_id": "T2",
-      "time_marker": "8:40 PM",
-      "summary": "The victim privately tells Nora that a public accusation will be made tonight.",
+      "event_id": "T02",
+      "time_marker": "20:45",
+      "summary": "Alistair retreats to the library with a bottle of port, locking the main door and demanding not to be disturbed.",
       "participants": [
-        "Professor Adrian Wren",
-        "Nora Bell"
+        "Sir Alistair Thorne"
       ],
-      "location": "Archive room",
+      "location": "Library",
+      "public": true
+    },
+    {
+      "event_id": "T03",
+      "time_marker": "21:15",
+      "summary": "Eleanor Thorne knocks on the library door. Alistair shouts at her to leave. The butler, Parker, witnesses this exchange.",
+      "participants": [
+        "Eleanor Thorne",
+        "Sir Alistair Thorne",
+        "Parker the Butler"
+      ],
+      "location": "Library Hallway",
+      "public": true
+    },
+    {
+      "event_id": "T04",
+      "time_marker": "21:30",
+      "summary": "Evelyn Vance enters the library through the servant\u2019s entrance behind the tapestry, carrying a hidden poisoned glass.",
+      "participants": [
+        "Evelyn Vance",
+        "Sir Alistair Thorne"
+      ],
+      "location": "Library",
       "public": false
     },
     {
-      "event_id": "T3",
-      "time_marker": "8:55 PM",
-      "summary": "Julian initiates a fake maintenance alert and quietly disables the east corridor camera.",
+      "event_id": "T05",
+      "time_marker": "21:40",
+      "summary": "Sir Alistair consumes the poisoned port and dies within minutes. Evelyn swaps the glasses and wipes the desk.",
       "participants": [
-        "Julian Pike"
+        "Evelyn Vance",
+        "Sir Alistair Thorne"
       ],
-      "location": "Security office",
+      "location": "Library",
       "public": false
     },
     {
-      "event_id": "T4",
-      "time_marker": "9:00 PM",
-      "summary": "Nora delivers tea to the victim, unaware Julian has already tampered with the route.",
+      "event_id": "T06",
+      "time_marker": "21:50",
+      "summary": "Evelyn exits to the Conservatory to dispose of the poisoned glass vial in a planter. She drops a lace handkerchief.",
       "participants": [
-        "Professor Adrian Wren",
-        "Nora Bell"
+        "Evelyn Vance"
       ],
-      "location": "Lecture antechamber",
+      "location": "Conservatory",
       "public": false
     },
     {
-      "event_id": "T5",
-      "time_marker": "9:08 PM",
-      "summary": "Julian messages the victim about an urgent discovery in the map room.",
+      "event_id": "T07",
+      "time_marker": "22:00",
+      "summary": "Major Sterling enters the library via the French windows. He finds Alistair dead. Instead of calling for help, he steals his own promissory note from the desk.",
       "participants": [
-        "Professor Adrian Wren",
-        "Julian Pike"
+        "Major Julian Sterling",
+        "Sir Alistair Thorne"
       ],
-      "location": "East corridor",
+      "location": "Library",
       "public": false
     },
     {
-      "event_id": "T6",
-      "time_marker": "9:12 PM",
-      "summary": "The victim is killed in the map room with a poisoned puncture wound.",
+      "event_id": "T08",
+      "time_marker": "22:10",
+      "summary": "Arthur Penhaligon enters the Breakfast Room and burns the forged ledger pages in the fireplace.",
       "participants": [
-        "Professor Adrian Wren",
-        "Julian Pike"
+        "Arthur Penhaligon"
       ],
-      "location": "Map room",
+      "location": "Breakfast Room",
       "public": false
     },
     {
-      "event_id": "T7",
-      "time_marker": "9:15 PM",
-      "summary": "Julian triggers a brief power fluctuation to scramble witness recollection and coverage.",
+      "event_id": "T09",
+      "time_marker": "22:15",
+      "summary": "A loud crash is heard. The house cat knocks over a Ming vase in the drawing room, creating a distraction.",
       "participants": [
-        "Julian Pike"
+        "N/A"
       ],
-      "location": "Basement control panel",
-      "public": false
+      "location": "Drawing Room",
+      "public": true
     },
     {
-      "event_id": "T8",
-      "time_marker": "9:20 PM",
-      "summary": "The body is discovered and the estate is locked down.",
+      "event_id": "T10",
+      "time_marker": "22:45",
+      "summary": "Evelyn Vance returns to the Ballroom, appearing calm and joining the remaining guests for late tea.",
       "participants": [
-        "Evelyn Cross",
-        "Miles Dorian",
-        "Nora Bell",
-        "Julian Pike"
+        "Evelyn Vance",
+        "Eleanor Thorne"
       ],
-      "location": "Map room",
+      "location": "Ballroom",
+      "public": true
+    },
+    {
+      "event_id": "T11",
+      "time_marker": "23:00",
+      "summary": "Parker the Butler enters the library to check on the fire and discovers Sir Alistair's body.",
+      "participants": [
+        "Parker the Butler",
+        "Sir Alistair Thorne"
+      ],
+      "location": "Library",
       "public": true
     }
   ],
   "evidence_items": [
     {
-      "evidence_id": "E1",
-      "name": "Cracked teacup",
-      "description": "A teacup bearing Nora's fingerprints but no poison residue.",
-      "location_found": "Lecture antechamber",
-      "implicated_person": "Nora Bell",
+      "evidence_id": "E01",
+      "name": "Half-empty Port Glass",
+      "description": "The glass on the desk. It contains traces of potassium cyanide and smells faintly of bitter almonds.",
+      "location_found": "Library Desk",
+      "implicated_person": "Evelyn Vance",
+      "reliability": 0.95,
+      "planted": false
+    },
+    {
+      "evidence_id": "E02",
+      "name": "Charred Ledger Fragment",
+      "description": "A corner of a page from the estate accounts showing Arthur Penhaligon\u2019s signature next to an altered figure.",
+      "location_found": "Breakfast Room Fireplace",
+      "implicated_person": "Arthur Penhaligon",
+      "reliability": 0.8,
+      "planted": false
+    },
+    {
+      "evidence_id": "E03",
+      "name": "Lace Handkerchief",
+      "description": "A fine lace handkerchief embroidered with 'E.V.' stained with potting soil and lily pollen.",
+      "location_found": "Conservatory",
+      "implicated_person": "Evelyn Vance",
+      "reliability": 0.85,
+      "planted": false
+    },
+    {
+      "evidence_id": "E04",
+      "name": "The Promissory Note",
+      "description": "A document signed by Major Sterling for five thousand pounds, found hidden in his boot.",
+      "location_found": "Guest Wing (Sterling's Room)",
+      "implicated_person": "Major Julian Sterling",
+      "reliability": 0.9,
+      "planted": false
+    },
+    {
+      "evidence_id": "E05",
+      "name": "Empty Amber Vial",
+      "description": "A small glass vial labeled 'Digitalis Extract' but containing traces of cyanide. Hidden in the soil of a potted fern.",
+      "location_found": "Conservatory",
+      "implicated_person": "Evelyn Vance",
+      "reliability": 0.9,
+      "planted": false
+    },
+    {
+      "evidence_id": "E06",
+      "name": "Torn Silk Scantling",
+      "description": "A small triangular piece of colorful silk matching the Harlequin costume worn by Evelyn.",
+      "location_found": "Library Door Latch",
+      "implicated_person": "Evelyn Vance",
+      "reliability": 0.8,
+      "planted": false
+    },
+    {
+      "evidence_id": "E07",
+      "name": "Wet Size 5 Footprint",
+      "description": "A small, feminine mud print near the servant's entrance to the library.",
+      "location_found": "Library Entrance",
+      "implicated_person": "Evelyn Vance",
       "reliability": 0.75,
       "planted": false
     },
     {
-      "evidence_id": "E2",
-      "name": "Deleted security segment",
-      "description": "A seven-minute gap in east corridor footage manually triggered from the security desk.",
-      "location_found": "Security office",
-      "implicated_person": "Julian Pike",
-      "reliability": 0.98,
-      "planted": false
-    },
-    {
-      "evidence_id": "E3",
-      "name": "Digitalis trace",
-      "description": "A toxicology trace on the victim's collar consistent with digitalis delivery by puncture.",
-      "location_found": "Victim's clothing",
-      "implicated_person": "Julian Pike",
-      "reliability": 0.94,
-      "planted": false
-    },
-    {
-      "evidence_id": "E4",
-      "name": "Missing display spike",
-      "description": "A display label from an antique navigation spike case now missing one item.",
-      "location_found": "Map room display",
-      "implicated_person": "Julian Pike",
-      "reliability": 0.88,
-      "planted": false
-    },
-    {
-      "evidence_id": "E5",
-      "name": "Burned ledger scrap",
-      "description": "A scrap from the retreat accounts suggesting Evelyn hid expenses.",
-      "location_found": "Fireplace grate",
-      "implicated_person": "Evelyn Cross",
-      "reliability": 0.67,
-      "planted": false
-    },
-    {
-      "evidence_id": "E6",
-      "name": "Unsigned apology draft",
-      "description": "A draft apology in Miles's notebook after the victim threatened exposure.",
-      "location_found": "Observatory desk",
-      "implicated_person": "Miles Dorian",
-      "reliability": 0.71,
-      "planted": false
-    },
-    {
-      "evidence_id": "E7",
-      "name": "Basement boot print",
-      "description": "Wet tread marks matching Julian's boots lead from the control panel toward the east stair.",
-      "location_found": "Basement corridor",
-      "implicated_person": "Julian Pike",
-      "reliability": 0.91,
-      "planted": false
-    },
-    {
-      "evidence_id": "E8",
-      "name": "Phone message extract",
-      "description": "A recovered message summoning the victim to the map room from Julian's device.",
-      "location_found": "Victim's phone",
-      "implicated_person": "Julian Pike",
-      "reliability": 0.97,
-      "planted": false
-    },
-    {
-      "evidence_id": "E9",
-      "name": "Cut generator wire",
-      "description": "A deliberately nicked wire that caused the brief outage used to support Julian's alibi.",
-      "location_found": "Generator housing",
-      "implicated_person": "Julian Pike",
-      "reliability": 0.89,
+      "evidence_id": "E08",
+      "name": "Botanical Journal",
+      "description": "A notebook detailing the extraction methods for various alkaloids, including a handwritten note on 'The Swiftness of Cyanide'.",
+      "location_found": "Evelyn's Luggage",
+      "implicated_person": "Evelyn Vance",
+      "reliability": 1.0,
       "planted": false
     }
   ],
   "red_herrings": [
     {
-      "herring_id": "RH1",
-      "suspect_name": "Nora Bell",
+      "herring_id": "H01",
+      "suspect_name": "Arthur Penhaligon",
       "misleading_evidence_ids": [
-        "E1"
+        "E02"
       ],
-      "explanation": "Nora appears suspicious because she served the victim's tea, but the poison was not ingested."
+      "explanation": "The burned ledger makes Arthur look like he killed Alistair to hide his theft. In reality, he only stole the ledger and burned it after he found the body was already cold, taking advantage of the situation."
     },
     {
-      "herring_id": "RH2",
-      "suspect_name": "Evelyn Cross",
+      "herring_id": "H02",
+      "suspect_name": "Major Julian Sterling",
       "misleading_evidence_ids": [
-        "E5"
+        "E04"
       ],
-      "explanation": "Evelyn hid financial fraud, giving her motive to lie, but that misconduct is separate from the murder."
+      "explanation": "Sterling\u2019s possession of the note and his presence in the library suggest he is the killer. However, he entered through the windows after the poison had already taken effect, intending to commit a robbery, not a murder."
     }
   ],
   "culprit_evidence_chain": [
-    "E2",
-    "E8",
-    "E3",
-    "E4",
-    "E7",
-    "E9"
-  ],
-  "notes": "The truth surfaced only when the smallest contradiction stopped looking small."
+    "E06",
+    "E03",
+    "E05",
+    "E08"
+  ]
 }

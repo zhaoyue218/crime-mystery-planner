@@ -66,7 +66,6 @@ class FactTriple:
     object: str
     time: str | None
     source: str
-    confidence: float
 
 
 @dataclass

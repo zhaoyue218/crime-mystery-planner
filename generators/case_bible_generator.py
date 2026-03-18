@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from random import Random
+from typing import Any
 
 from llm_interface import LLMBackend
 from models import CaseBible, Character, EvidenceItem, RedHerring, TimelineEvent
@@ -15,235 +17,16 @@ class CaseBibleGenerator:
 
     def generate(self) -> CaseBible:
         setting = self.setting_file.read_text(encoding="utf-8").strip()
-
-        victim = Character(
-            name="Professor Adrian Wren",
-            role="victim",
-            description="A celebrated criminologist who planned to expose fraud at the retreat.",
-            relationship_to_victim="self",
-            means="n/a",
-            motive="n/a",
-            opportunity="n/a",
-            alibi="n/a",
-        )
-
-        suspects = [
-            Character(
-                name="Evelyn Cross",
-                role="suspect",
-                description="The retreat director whose finances depend on the professor's endorsement.",
-                relationship_to_victim="host and recent professional rival",
-                means="Access to the estate's service corridors and maintenance keys.",
-                motive="Feared exposure of embezzlement tied to retreat funds.",
-                opportunity="Met the victim shortly before the lights failed.",
-                alibi="Claims she was greeting donors in the west salon at 9:05 PM.",
-            ),
-            Character(
-                name="Miles Dorian",
-                role="suspect",
-                description="A bestselling true-crime author accused by the victim of plagiarism.",
-                relationship_to_victim="public adversary",
-                means="Handled rare toxins during research for a previous book.",
-                motive="Wanted to stop the victim from ruining his reputation at the keynote.",
-                opportunity="Was seen near the library corridor ten minutes before the death.",
-                alibi="Says he was recording notes alone in the observatory at 9:10 PM.",
-            ),
-            Character(
-                name="Nora Bell",
-                role="suspect",
-                description="The victim's graduate assistant who depended on him for recommendation letters.",
-                relationship_to_victim="assistant with growing resentment",
-                means="Organized the victim's tea service and handled his schedule.",
-                motive="Learned that the victim intended to sabotage her fellowship application.",
-                opportunity="Delivered the victim's tea before the lecture.",
-                alibi="States she stayed in the archive room cataloging papers at 9:00 PM.",
-            ),
-            Character(
-                name="Julian Pike",
-                role="culprit",
-                description="The estate's head of security and the victim's former research subject.",
-                relationship_to_victim="past subject with a hidden grudge",
-                means="Controlled camera outages and had access to the antique display weapons.",
-                motive="The victim was about to reveal Julian had fabricated data in a famous cold case study.",
-                opportunity="Used a staged security sweep to move unseen through the east stair.",
-                alibi="Claims he was resetting a generator fault in the basement at 9:12 PM.",
-            ),
-        ]
-
-        culprit = suspects[-1]
-        motive = culprit.motive
-        method = (
-            "Julian disabled the east corridor camera, lured the victim to the map room, "
-            "then used a puncture device coated with fast-acting digitalis to mimic a sudden collapse."
-        )
-
-        timeline = [
-            TimelineEvent(
-                event_id="T1",
-                time_marker="8:15 PM",
-                summary="Guests arrive for the retreat gala while snow closes the access road.",
-                participants=["Evelyn Cross", "Miles Dorian", "Nora Bell", "Julian Pike", victim.name],
-                location="Grand foyer",
-                public=True,
-            ),
-            TimelineEvent(
-                event_id="T2",
-                time_marker="8:40 PM",
-                summary="The victim privately tells Nora that a public accusation will be made tonight.",
-                participants=[victim.name, "Nora Bell"],
-                location="Archive room",
-                public=False,
-            ),
-            TimelineEvent(
-                event_id="T3",
-                time_marker="8:55 PM",
-                summary="Julian initiates a fake maintenance alert and quietly disables the east corridor camera.",
-                participants=["Julian Pike"],
-                location="Security office",
-                public=False,
-            ),
-            TimelineEvent(
-                event_id="T4",
-                time_marker="9:00 PM",
-                summary="Nora delivers tea to the victim, unaware Julian has already tampered with the route.",
-                participants=[victim.name, "Nora Bell"],
-                location="Lecture antechamber",
-                public=False,
-            ),
-            TimelineEvent(
-                event_id="T5",
-                time_marker="9:08 PM",
-                summary="Julian messages the victim about an urgent discovery in the map room.",
-                participants=[victim.name, "Julian Pike"],
-                location="East corridor",
-                public=False,
-            ),
-            TimelineEvent(
-                event_id="T6",
-                time_marker="9:12 PM",
-                summary="The victim is killed in the map room with a poisoned puncture wound.",
-                participants=[victim.name, "Julian Pike"],
-                location="Map room",
-                public=False,
-            ),
-            TimelineEvent(
-                event_id="T7",
-                time_marker="9:15 PM",
-                summary="Julian triggers a brief power fluctuation to scramble witness recollection and coverage.",
-                participants=["Julian Pike"],
-                location="Basement control panel",
-                public=False,
-            ),
-            TimelineEvent(
-                event_id="T8",
-                time_marker="9:20 PM",
-                summary="The body is discovered and the estate is locked down.",
-                participants=["Evelyn Cross", "Miles Dorian", "Nora Bell", "Julian Pike"],
-                location="Map room",
-                public=True,
-            ),
-        ]
-
-        evidence_items = [
-            EvidenceItem(
-                evidence_id="E1",
-                name="Cracked teacup",
-                description="A teacup bearing Nora's fingerprints but no poison residue.",
-                location_found="Lecture antechamber",
-                implicated_person="Nora Bell",
-                reliability=0.75,
-                planted=False,
-            ),
-            EvidenceItem(
-                evidence_id="E2",
-                name="Deleted security segment",
-                description="A seven-minute gap in east corridor footage manually triggered from the security desk.",
-                location_found="Security office",
-                implicated_person="Julian Pike",
-                reliability=0.98,
-                planted=False,
-            ),
-            EvidenceItem(
-                evidence_id="E3",
-                name="Digitalis trace",
-                description="A toxicology trace on the victim's collar consistent with digitalis delivery by puncture.",
-                location_found="Victim's clothing",
-                implicated_person="Julian Pike",
-                reliability=0.94,
-                planted=False,
-            ),
-            EvidenceItem(
-                evidence_id="E4",
-                name="Missing display spike",
-                description="A display label from an antique navigation spike case now missing one item.",
-                location_found="Map room display",
-                implicated_person="Julian Pike",
-                reliability=0.88,
-                planted=False,
-            ),
-            EvidenceItem(
-                evidence_id="E5",
-                name="Burned ledger scrap",
-                description="A scrap from the retreat accounts suggesting Evelyn hid expenses.",
-                location_found="Fireplace grate",
-                implicated_person="Evelyn Cross",
-                reliability=0.67,
-                planted=False,
-            ),
-            EvidenceItem(
-                evidence_id="E6",
-                name="Unsigned apology draft",
-                description="A draft apology in Miles's notebook after the victim threatened exposure.",
-                location_found="Observatory desk",
-                implicated_person="Miles Dorian",
-                reliability=0.71,
-                planted=False,
-            ),
-            EvidenceItem(
-                evidence_id="E7",
-                name="Basement boot print",
-                description="Wet tread marks matching Julian's boots lead from the control panel toward the east stair.",
-                location_found="Basement corridor",
-                implicated_person="Julian Pike",
-                reliability=0.91,
-                planted=False,
-            ),
-            EvidenceItem(
-                evidence_id="E8",
-                name="Phone message extract",
-                description="A recovered message summoning the victim to the map room from Julian's device.",
-                location_found="Victim's phone",
-                implicated_person="Julian Pike",
-                reliability=0.97,
-                planted=False,
-            ),
-            EvidenceItem(
-                evidence_id="E9",
-                name="Cut generator wire",
-                description="A deliberately nicked wire that caused the brief outage used to support Julian's alibi.",
-                location_found="Generator housing",
-                implicated_person="Julian Pike",
-                reliability=0.89,
-                planted=False,
-            ),
-        ]
-
-        red_herrings = [
-            RedHerring(
-                herring_id="RH1",
-                suspect_name="Nora Bell",
-                misleading_evidence_ids=["E1"],
-                explanation="Nora appears suspicious because she served the victim's tea, but the poison was not ingested.",
-            ),
-            RedHerring(
-                herring_id="RH2",
-                suspect_name="Evelyn Cross",
-                misleading_evidence_ids=["E5"],
-                explanation="Evelyn hid financial fraud, giving her motive to lie, but that misconduct is separate from the murder.",
-            ),
-        ]
-
-        culprit_evidence_chain = ["E2", "E8", "E3", "E4", "E7", "E9"]
+        blueprint = self._generate_case_blueprint(setting)
+        victim = self._build_character(blueprint["victim"])
+        suspects = [self._build_character(item) for item in blueprint["suspects"]]
+        culprit = self._resolve_culprit(blueprint, suspects)
+        motive = self._require_string(blueprint, "motive")
+        method = self._require_string(blueprint, "method")
+        timeline = [self._build_timeline_event(item) for item in blueprint["true_timeline"]]
+        evidence_items = [self._build_evidence_item(item) for item in blueprint["evidence_items"]]
+        red_herrings = [self._build_red_herring(item) for item in blueprint["red_herrings"]]
+        culprit_evidence_chain = self._build_culprit_chain(blueprint, evidence_items)
 
         return CaseBible(
             setting=setting,
@@ -257,3 +40,178 @@ class CaseBibleGenerator:
             red_herrings=red_herrings,
             culprit_evidence_chain=culprit_evidence_chain,
         )
+
+    def _generate_case_blueprint(self, setting: str) -> dict[str, Any]:
+        prompt = (
+            "Generate a crime-mystery case bible as valid JSON.\n"
+            "Return JSON only. Do not use markdown fences.\n"
+            "The JSON must follow this schema exactly:\n"
+            "{\n"
+            '  "victim": {"name": str, "role": "victim", "description": str, "relationship_to_victim": str, "means": str, "motive": str, "opportunity": str, "alibi": str},\n'
+            '  "suspects": [\n'
+            '    {"name": str, "role": "suspect" or "culprit", "description": str, "relationship_to_victim": str, "means": str, "motive": str, "opportunity": str, "alibi": str}\n'
+            "  ],\n"
+            '  "culprit_name": str,\n'
+            '  "motive": str,\n'
+            '  "method": str,\n'
+            '  "true_timeline": [\n'
+            '    {"event_id": str, "time_marker": str, "summary": str, "participants": [str], "location": str, "public": bool}\n'
+            "  ],\n"
+            '  "evidence_items": [\n'
+            '    {"evidence_id": str, "name": str, "description": str, "location_found": str, "implicated_person": str, "reliability": float, "planted": bool}\n'
+            "  ],\n"
+            '  "red_herrings": [\n'
+            '    {"herring_id": str, "suspect_name": str, "misleading_evidence_ids": [str], "explanation": str}\n'
+            "  ],\n"
+            '  "culprit_evidence_chain": [str]\n'
+            "}\n\n"
+            "Requirements:\n"
+            "- At least 4 suspects total, including exactly 1 culprit.\n"
+            "- At least 8 evidence items.\n"
+            "- At least 1 red herring.\n"
+            "- Timeline and evidence must support the culprit clearly.\n"
+            "- Keep all names, relationships, motives, methods, and clues consistent with the setting.\n"
+            "- Avoid modern technology or forensic methods if the setting forbids them.\n"
+            "- Make every required field non-empty.\n\n"
+            "Quality constraints:\n"
+            "- Design exactly one primary murder method. Do not use multiple competing true methods.\n"
+            "- If there is a misleading wound, object, or apparent cause of death, it must be explicitly a red herring or staging detail, not a second true killing method.\n"
+            "- Make the culprit's motive, means, opportunity, and alibi mutually coherent.\n"
+            "- Give each non-culprit suspect a plausible private secret, tension, or compromising circumstance so they are not generic fillers.\n"
+            "- Make at least 2 suspects have partially believable but ultimately flawed alibis.\n"
+            "- The true_timeline should be rich enough to support a long investigation: include not only the murder itself, but also key pre-murder tensions, suspicious movements, concealment attempts, discovery events, and at least one misleading event.\n"
+            "- Prefer 8-12 timeline events rather than a minimal sequence.\n"
+            "- Evidence items should not be redundant. Mix direct, indirect, and misleading clues.\n"
+            "- The culprit_evidence_chain must be a coherent chain of 3-5 evidence items that collectively identify the culprit through reasoning, not merely a list of all suspicious objects.\n"
+            "- At least one red herring should be strong enough to support a plausible but ultimately false theory of the crime.\n"
+            "- Keep the case fair-play: the hidden truth should make the final solution explainable from the evidence.\n\n"
+            f"Setting constraints:\n{setting}"
+        )
+        raw = self.llm.generate(prompt).text
+        data = self._extract_json_object(raw)
+        self._validate_blueprint_shape(data)
+        return data
+
+    def _extract_json_object(self, raw: str) -> dict[str, Any]:
+        text = raw.strip()
+        if text.startswith("```"):
+            lines = text.splitlines()
+            if lines and lines[0].startswith("```"):
+                lines = lines[1:]
+            if lines and lines[-1].startswith("```"):
+                lines = lines[:-1]
+            text = "\n".join(lines).strip()
+
+        start = text.find("{")
+        end = text.rfind("}")
+        if start == -1 or end == -1 or end < start:
+            raise RuntimeError(f"LLM did not return a JSON object: {raw}")
+
+        candidate = text[start : end + 1]
+        try:
+            data = json.loads(candidate)
+        except json.JSONDecodeError as exc:
+            raise RuntimeError(f"Failed to parse LLM JSON response: {candidate}") from exc
+
+        if not isinstance(data, dict):
+            raise RuntimeError(f"Expected top-level JSON object, got: {type(data).__name__}")
+        return data
+
+    def _validate_blueprint_shape(self, data: dict[str, Any]) -> None:
+        required_keys = [
+            "victim",
+            "suspects",
+            "culprit_name",
+            "motive",
+            "method",
+            "true_timeline",
+            "evidence_items",
+            "red_herrings",
+            "culprit_evidence_chain",
+        ]
+        missing = [key for key in required_keys if key not in data]
+        if missing:
+            raise RuntimeError(f"LLM case blueprint is missing required keys: {missing}")
+
+    def _build_character(self, data: dict[str, Any]) -> Character:
+        return Character(
+            name=self._require_string(data, "name"),
+            role=self._require_string(data, "role"),
+            description=self._require_string(data, "description"),
+            relationship_to_victim=self._require_string(data, "relationship_to_victim"),
+            means=self._require_string(data, "means"),
+            motive=self._require_string(data, "motive"),
+            opportunity=self._require_string(data, "opportunity"),
+            alibi=self._require_string(data, "alibi"),
+        )
+
+    def _build_timeline_event(self, data: dict[str, Any]) -> TimelineEvent:
+        participants = data.get("participants")
+        if not isinstance(participants, list) or not all(isinstance(item, str) and item.strip() for item in participants):
+            raise RuntimeError(f"Timeline event participants must be a non-empty list of strings: {data}")
+        public = data.get("public")
+        if not isinstance(public, bool):
+            raise RuntimeError(f"Timeline event public must be boolean: {data}")
+        return TimelineEvent(
+            event_id=self._require_string(data, "event_id"),
+            time_marker=self._require_string(data, "time_marker"),
+            summary=self._require_string(data, "summary"),
+            participants=[item.strip() for item in participants],
+            location=self._require_string(data, "location"),
+            public=public,
+        )
+
+    def _build_evidence_item(self, data: dict[str, Any]) -> EvidenceItem:
+        reliability_raw = data.get("reliability")
+        try:
+            reliability = float(reliability_raw)
+        except (TypeError, ValueError) as exc:
+            raise RuntimeError(f"Evidence reliability must be numeric: {data}") from exc
+        planted = data.get("planted", False)
+        if not isinstance(planted, bool):
+            raise RuntimeError(f"Evidence planted must be boolean: {data}")
+        return EvidenceItem(
+            evidence_id=self._require_string(data, "evidence_id"),
+            name=self._require_string(data, "name"),
+            description=self._require_string(data, "description"),
+            location_found=self._require_string(data, "location_found"),
+            implicated_person=self._require_string(data, "implicated_person"),
+            reliability=reliability,
+            planted=planted,
+        )
+
+    def _build_red_herring(self, data: dict[str, Any]) -> RedHerring:
+        misleading_ids = data.get("misleading_evidence_ids")
+        if not isinstance(misleading_ids, list) or not all(isinstance(item, str) and item.strip() for item in misleading_ids):
+            raise RuntimeError(f"Red herring misleading_evidence_ids must be a list of strings: {data}")
+        return RedHerring(
+            herring_id=self._require_string(data, "herring_id"),
+            suspect_name=self._require_string(data, "suspect_name"),
+            misleading_evidence_ids=[item.strip() for item in misleading_ids],
+            explanation=self._require_string(data, "explanation"),
+        )
+
+    def _resolve_culprit(self, data: dict[str, Any], suspects: list[Character]) -> Character:
+        culprit_name = self._require_string(data, "culprit_name")
+        for suspect in suspects:
+            if suspect.name == culprit_name:
+                suspect.role = "culprit"
+                return suspect
+        raise RuntimeError(f"Culprit name {culprit_name!r} was not found in suspects.")
+
+    def _build_culprit_chain(self, data: dict[str, Any], evidence_items: list[EvidenceItem]) -> list[str]:
+        chain = data.get("culprit_evidence_chain")
+        if not isinstance(chain, list) or not all(isinstance(item, str) and item.strip() for item in chain):
+            raise RuntimeError("culprit_evidence_chain must be a list of non-empty strings.")
+        evidence_ids = {item.evidence_id for item in evidence_items}
+        normalized_chain = [item.strip() for item in chain]
+        missing = [item for item in normalized_chain if item not in evidence_ids]
+        if missing:
+            raise RuntimeError(f"Culprit evidence chain references unknown evidence ids: {missing}")
+        return normalized_chain
+
+    def _require_string(self, data: dict[str, Any], key: str) -> str:
+        value = data.get(key)
+        if not isinstance(value, str) or not value.strip():
+            raise RuntimeError(f"Expected non-empty string for {key!r}, got: {value!r}")
+        return value.strip()

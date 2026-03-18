@@ -1,754 +1,674 @@
 [
   {
-    "subject": "Murder Beneath the Clocktower Snow",
+    "subject": "case",
     "relation": "set_in",
     "object": "A classic closed-circle manor mystery set in rural England in the late 1920s. On a stormy autumn evening, a select group of guests has gathered at an old country estate for a formal masquerade and private supper. By nightfall, the roads are flooded, the grounds are impassable, and the household is sealed off from the outside world until morning.\n\nThe story should feel like a traditional fair-play whodunit: atmospheric, elegant, and deduction-centered. It must be historically and technologically consistent with the late 1920s. No modern communications, digital devices, surveillance systems, database searches, or advanced forensic procedures may be used. The mystery must unfold through interviews, conflicting testimony, timing discrepancies, room access, physical traces, written documents, household objects, and careful reasoning.\n\nThe estate should provide a rich but finite investigative space, including rooms such as a library, study, ballroom, conservatory, dining room, guest wing, servant corridors, and private chambers. The characters should be socially plausible for the period and setting: aristocratic family members, family friends, staff, professional associates, or dependents, each carrying secrets, anxieties, and conflicting interests. Themes may include inheritance, scandal, debt, blackmail, jealousy, class tension, and fear of public disgrace.\n\nThe crime should be designed as a layered but fair mystery with one true culprit, one victim, at least four serious suspects, at least eight evidence items, at least one red herring arc, at least two alibi checks, and at least one deliberate attempt to mislead the investigation. The hidden truth must support a long-form investigation with at least fifteen substantial plot beats, culminating in a final confrontation grounded in a clear and coherent chain of evidence.",
     "time": null,
-    "source": "case_bible",
-    "confidence": 1.0
+    "source": "case_bible"
   },
   {
-    "subject": "Professor Adrian Wren",
+    "subject": "Sir Alistair Thorne",
     "relation": "is_victim",
     "object": "true",
-    "time": "9:12 PM",
-    "source": "case_bible",
-    "confidence": 1.0
+    "time": "21:40",
+    "source": "case_bible"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Evelyn Vance",
     "relation": "is_culprit",
     "object": "true",
-    "time": "9:12 PM",
-    "source": "case_bible",
-    "confidence": 1.0
+    "time": "21:40",
+    "source": "case_bible"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Evelyn Vance",
     "relation": "has_motive",
-    "object": "The victim was about to reveal Julian had fabricated data in a famous cold case study.",
+    "object": "Evelyn sought retribution for the systematic destruction of her father's reputation and life by Alistair Thorne. She waited for the masquerade, knowing the chaos and costumes would provide cover for her movements.",
     "time": null,
-    "source": "case_bible",
-    "confidence": 0.99
+    "source": "case_bible"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Evelyn Vance",
     "relation": "used_method",
-    "object": "Julian disabled the east corridor camera, lured the victim to the map room, then used a puncture device coated with fast-acting digitalis to mimic a sudden collapse.",
-    "time": "9:12 PM",
-    "source": "case_bible",
-    "confidence": 0.99
+    "object": "Potassium cyanide poisoning. Evelyn substituted Alistair's nightly glass of vintage port with a pre-poisoned glass she brought under her harlequin cloak.",
+    "time": "21:40",
+    "source": "case_bible"
   },
   {
-    "subject": "Evelyn Cross",
-    "relation": "role",
-    "object": "suspect",
-    "time": null,
-    "source": "case_bible",
-    "confidence": 1.0
-  },
-  {
-    "subject": "Evelyn Cross",
-    "relation": "relationship_to_victim",
-    "object": "host and recent professional rival",
-    "time": null,
-    "source": "case_bible",
-    "confidence": 0.95
-  },
-  {
-    "subject": "Evelyn Cross",
-    "relation": "means",
-    "object": "Access to the estate's service corridors and maintenance keys.",
-    "time": null,
-    "source": "case_bible",
-    "confidence": 0.93
-  },
-  {
-    "subject": "Evelyn Cross",
-    "relation": "motive",
-    "object": "Feared exposure of embezzlement tied to retreat funds.",
-    "time": null,
-    "source": "case_bible",
-    "confidence": 0.9
-  },
-  {
-    "subject": "Evelyn Cross",
-    "relation": "opportunity",
-    "object": "Met the victim shortly before the lights failed.",
-    "time": "9:00 PM-9:15 PM",
-    "source": "case_bible",
-    "confidence": 0.9
-  },
-  {
-    "subject": "Evelyn Cross",
-    "relation": "alibi",
-    "object": "Claims she was greeting donors in the west salon at 9:05 PM.",
-    "time": "9:00 PM-9:15 PM",
-    "source": "case_bible",
-    "confidence": 0.88
-  },
-  {
-    "subject": "Miles Dorian",
-    "relation": "role",
-    "object": "suspect",
-    "time": null,
-    "source": "case_bible",
-    "confidence": 1.0
-  },
-  {
-    "subject": "Miles Dorian",
-    "relation": "relationship_to_victim",
-    "object": "public adversary",
-    "time": null,
-    "source": "case_bible",
-    "confidence": 0.95
-  },
-  {
-    "subject": "Miles Dorian",
-    "relation": "means",
-    "object": "Handled rare toxins during research for a previous book.",
-    "time": null,
-    "source": "case_bible",
-    "confidence": 0.93
-  },
-  {
-    "subject": "Miles Dorian",
-    "relation": "motive",
-    "object": "Wanted to stop the victim from ruining his reputation at the keynote.",
-    "time": null,
-    "source": "case_bible",
-    "confidence": 0.9
-  },
-  {
-    "subject": "Miles Dorian",
-    "relation": "opportunity",
-    "object": "Was seen near the library corridor ten minutes before the death.",
-    "time": "9:00 PM-9:15 PM",
-    "source": "case_bible",
-    "confidence": 0.9
-  },
-  {
-    "subject": "Miles Dorian",
-    "relation": "alibi",
-    "object": "Says he was recording notes alone in the observatory at 9:10 PM.",
-    "time": "9:00 PM-9:15 PM",
-    "source": "case_bible",
-    "confidence": 0.88
-  },
-  {
-    "subject": "Nora Bell",
-    "relation": "role",
-    "object": "suspect",
-    "time": null,
-    "source": "case_bible",
-    "confidence": 1.0
-  },
-  {
-    "subject": "Nora Bell",
-    "relation": "relationship_to_victim",
-    "object": "assistant with growing resentment",
-    "time": null,
-    "source": "case_bible",
-    "confidence": 0.95
-  },
-  {
-    "subject": "Nora Bell",
-    "relation": "means",
-    "object": "Organized the victim's tea service and handled his schedule.",
-    "time": null,
-    "source": "case_bible",
-    "confidence": 0.93
-  },
-  {
-    "subject": "Nora Bell",
-    "relation": "motive",
-    "object": "Learned that the victim intended to sabotage her fellowship application.",
-    "time": null,
-    "source": "case_bible",
-    "confidence": 0.9
-  },
-  {
-    "subject": "Nora Bell",
-    "relation": "opportunity",
-    "object": "Delivered the victim's tea before the lecture.",
-    "time": "9:00 PM-9:15 PM",
-    "source": "case_bible",
-    "confidence": 0.9
-  },
-  {
-    "subject": "Nora Bell",
-    "relation": "alibi",
-    "object": "States she stayed in the archive room cataloging papers at 9:00 PM.",
-    "time": "9:00 PM-9:15 PM",
-    "source": "case_bible",
-    "confidence": 0.88
-  },
-  {
-    "subject": "Julian Pike",
+    "subject": "Evelyn Vance",
     "relation": "role",
     "object": "culprit",
     "time": null,
-    "source": "case_bible",
-    "confidence": 1.0
+    "source": "case_bible"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Evelyn Vance",
     "relation": "relationship_to_victim",
-    "object": "past subject with a hidden grudge",
+    "object": "Niece and ward",
     "time": null,
-    "source": "case_bible",
-    "confidence": 0.95
+    "source": "case_bible"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Evelyn Vance",
     "relation": "means",
-    "object": "Controlled camera outages and had access to the antique display weapons.",
+    "object": "Knowledge of toxins and access to her late father's chemical supplies.",
     "time": null,
-    "source": "case_bible",
-    "confidence": 0.93
+    "source": "case_bible"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Evelyn Vance",
     "relation": "motive",
-    "object": "The victim was about to reveal Julian had fabricated data in a famous cold case study.",
+    "object": "Revenge for her father's financial ruin and subsequent suicide, orchestrated by Alistair.",
     "time": null,
-    "source": "case_bible",
-    "confidence": 0.9
+    "source": "case_bible"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Evelyn Vance",
     "relation": "opportunity",
-    "object": "Used a staged security sweep to move unseen through the east stair.",
-    "time": "9:00 PM-9:15 PM",
-    "source": "case_bible",
-    "confidence": 0.9
+    "object": "Entered the library at 21:30 under the guise of bringing Alistair his evening port.",
+    "time": "21:30 to 21:50",
+    "source": "case_bible"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Evelyn Vance",
     "relation": "alibi",
-    "object": "Claims he was resetting a generator fault in the basement at 9:12 PM.",
-    "time": "9:00 PM-9:15 PM",
-    "source": "case_bible",
-    "confidence": 0.88
+    "object": "Claims she was in the conservatory reading a book on orchids from 21:00 until 22:30.",
+    "time": "21:30 to 21:50",
+    "source": "case_bible"
   },
   {
-    "subject": "T1",
+    "subject": "Major Julian Sterling",
+    "relation": "role",
+    "object": "suspect",
+    "time": null,
+    "source": "case_bible"
+  },
+  {
+    "subject": "Major Julian Sterling",
+    "relation": "relationship_to_victim",
+    "object": "Close friend and business associate",
+    "time": null,
+    "source": "case_bible"
+  },
+  {
+    "subject": "Major Julian Sterling",
+    "relation": "means",
+    "object": "A heavy brass paperweight located on the library desk.",
+    "time": null,
+    "source": "case_bible"
+  },
+  {
+    "subject": "Major Julian Sterling",
+    "relation": "motive",
+    "object": "Alistair refused to bail him out of his massive gambling debts and threatened to inform the War Office.",
+    "time": null,
+    "source": "case_bible"
+  },
+  {
+    "subject": "Major Julian Sterling",
+    "relation": "opportunity",
+    "object": "Slipped into the library at 22:00 to plead for a loan; found Alistair already dead and stole a promissory note.",
+    "time": "19:30 to 22:00",
+    "source": "case_bible"
+  },
+  {
+    "subject": "Major Julian Sterling",
+    "relation": "alibi",
+    "object": "Claims he was in the billiard room alone practicing his trick shots from 21:30 to 22:15.",
+    "time": "19:30 to 22:00",
+    "source": "case_bible"
+  },
+  {
+    "subject": "Eleanor Thorne",
+    "relation": "role",
+    "object": "suspect",
+    "time": null,
+    "source": "case_bible"
+  },
+  {
+    "subject": "Eleanor Thorne",
+    "relation": "relationship_to_victim",
+    "object": "Wife",
+    "time": null,
+    "source": "case_bible"
+  },
+  {
+    "subject": "Eleanor Thorne",
+    "relation": "means",
+    "object": "Access to Alistair's heart medication, which could be lethal in high doses.",
+    "time": null,
+    "source": "case_bible"
+  },
+  {
+    "subject": "Eleanor Thorne",
+    "relation": "motive",
+    "object": "She discovered Alistair was planning to divorce her for her infidelity, which would leave her penniless.",
+    "time": null,
+    "source": "case_bible"
+  },
+  {
+    "subject": "Eleanor Thorne",
+    "relation": "opportunity",
+    "object": "Attempted to enter the library at 21:15 but was turned away by Alistair through the locked door.",
+    "time": "21:15",
+    "source": "case_bible"
+  },
+  {
+    "subject": "Eleanor Thorne",
+    "relation": "alibi",
+    "object": "Claims she retired to her chambers with a migraine at 21:00 and did not leave until the body was found.",
+    "time": "21:15",
+    "source": "case_bible"
+  },
+  {
+    "subject": "Arthur Penhaligon",
+    "relation": "role",
+    "object": "suspect",
+    "time": null,
+    "source": "case_bible"
+  },
+  {
+    "subject": "Arthur Penhaligon",
+    "relation": "relationship_to_victim",
+    "object": "Employee",
+    "time": null,
+    "source": "case_bible"
+  },
+  {
+    "subject": "Arthur Penhaligon",
+    "relation": "means",
+    "object": "Strangulation using his silk necktie.",
+    "time": null,
+    "source": "case_bible"
+  },
+  {
+    "subject": "Arthur Penhaligon",
+    "relation": "motive",
+    "object": "Alistair discovered Arthur had been embezzling funds and was planning to turn him over to the police that evening.",
+    "time": null,
+    "source": "case_bible"
+  },
+  {
+    "subject": "Arthur Penhaligon",
+    "relation": "opportunity",
+    "object": "Had keys to the servant's entrance of the library and was seen arguing with Alistair earlier in the night.",
+    "time": "19:30 to 22:10",
+    "source": "case_bible"
+  },
+  {
+    "subject": "Arthur Penhaligon",
+    "relation": "alibi",
+    "object": "Claims he was in the small study typing letters for the morning post from 21:00 to 23:00.",
+    "time": "19:30 to 22:10",
+    "source": "case_bible"
+  },
+  {
+    "subject": "T01",
     "relation": "timeline_event",
-    "object": "Guests arrive for the retreat gala while snow closes the access road.",
-    "time": "8:15 PM",
-    "source": "timeline",
-    "confidence": 0.97
+    "object": "Supper begins. Sir Alistair publicly berates Arthur Penhaligon for a 'discrepancy' in the accounts.",
+    "time": "19:30",
+    "source": "timeline"
   },
   {
-    "subject": "Evelyn Cross",
+    "subject": "Sir Alistair Thorne",
     "relation": "present_at",
-    "object": "Grand foyer",
-    "time": "8:15 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Dining Room",
+    "time": "19:30",
+    "source": "timeline"
   },
   {
-    "subject": "Miles Dorian",
+    "subject": "Arthur Penhaligon",
     "relation": "present_at",
-    "object": "Grand foyer",
-    "time": "8:15 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Dining Room",
+    "time": "19:30",
+    "source": "timeline"
   },
   {
-    "subject": "Nora Bell",
+    "subject": "Evelyn Vance",
     "relation": "present_at",
-    "object": "Grand foyer",
-    "time": "8:15 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Dining Room",
+    "time": "19:30",
+    "source": "timeline"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Eleanor Thorne",
     "relation": "present_at",
-    "object": "Grand foyer",
-    "time": "8:15 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Dining Room",
+    "time": "19:30",
+    "source": "timeline"
   },
   {
-    "subject": "Professor Adrian Wren",
+    "subject": "Major Julian Sterling",
     "relation": "present_at",
-    "object": "Grand foyer",
-    "time": "8:15 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Dining Room",
+    "time": "19:30",
+    "source": "timeline"
   },
   {
-    "subject": "T2",
+    "subject": "T02",
     "relation": "timeline_event",
-    "object": "The victim privately tells Nora that a public accusation will be made tonight.",
-    "time": "8:40 PM",
-    "source": "timeline",
-    "confidence": 0.97
+    "object": "Alistair retreats to the library with a bottle of port, locking the main door and demanding not to be disturbed.",
+    "time": "20:45",
+    "source": "timeline"
   },
   {
-    "subject": "Professor Adrian Wren",
+    "subject": "Sir Alistair Thorne",
     "relation": "present_at",
-    "object": "Archive room",
-    "time": "8:40 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Library",
+    "time": "20:45",
+    "source": "timeline"
   },
   {
-    "subject": "Nora Bell",
-    "relation": "present_at",
-    "object": "Archive room",
-    "time": "8:40 PM",
-    "source": "timeline",
-    "confidence": 0.85
-  },
-  {
-    "subject": "T3",
+    "subject": "T03",
     "relation": "timeline_event",
-    "object": "Julian initiates a fake maintenance alert and quietly disables the east corridor camera.",
-    "time": "8:55 PM",
-    "source": "timeline",
-    "confidence": 0.97
+    "object": "Eleanor Thorne knocks on the library door. Alistair shouts at her to leave. The butler, Parker, witnesses this exchange.",
+    "time": "21:15",
+    "source": "timeline"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Eleanor Thorne",
     "relation": "present_at",
-    "object": "Security office",
-    "time": "8:55 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Library Hallway",
+    "time": "21:15",
+    "source": "timeline"
   },
   {
-    "subject": "T4",
+    "subject": "Sir Alistair Thorne",
+    "relation": "present_at",
+    "object": "Library Hallway",
+    "time": "21:15",
+    "source": "timeline"
+  },
+  {
+    "subject": "Parker the Butler",
+    "relation": "present_at",
+    "object": "Library Hallway",
+    "time": "21:15",
+    "source": "timeline"
+  },
+  {
+    "subject": "T04",
     "relation": "timeline_event",
-    "object": "Nora delivers tea to the victim, unaware Julian has already tampered with the route.",
-    "time": "9:00 PM",
-    "source": "timeline",
-    "confidence": 0.97
+    "object": "Evelyn Vance enters the library through the servant\u2019s entrance behind the tapestry, carrying a hidden poisoned glass.",
+    "time": "21:30",
+    "source": "timeline"
   },
   {
-    "subject": "Professor Adrian Wren",
+    "subject": "Evelyn Vance",
     "relation": "present_at",
-    "object": "Lecture antechamber",
-    "time": "9:00 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Library",
+    "time": "21:30",
+    "source": "timeline"
   },
   {
-    "subject": "Nora Bell",
+    "subject": "Sir Alistair Thorne",
     "relation": "present_at",
-    "object": "Lecture antechamber",
-    "time": "9:00 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Library",
+    "time": "21:30",
+    "source": "timeline"
   },
   {
-    "subject": "T5",
+    "subject": "T05",
     "relation": "timeline_event",
-    "object": "Julian messages the victim about an urgent discovery in the map room.",
-    "time": "9:08 PM",
-    "source": "timeline",
-    "confidence": 0.97
+    "object": "Sir Alistair consumes the poisoned port and dies within minutes. Evelyn swaps the glasses and wipes the desk.",
+    "time": "21:40",
+    "source": "timeline"
   },
   {
-    "subject": "Professor Adrian Wren",
+    "subject": "Evelyn Vance",
     "relation": "present_at",
-    "object": "East corridor",
-    "time": "9:08 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Library",
+    "time": "21:40",
+    "source": "timeline"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Sir Alistair Thorne",
     "relation": "present_at",
-    "object": "East corridor",
-    "time": "9:08 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Library",
+    "time": "21:40",
+    "source": "timeline"
   },
   {
-    "subject": "T6",
+    "subject": "T06",
     "relation": "timeline_event",
-    "object": "The victim is killed in the map room with a poisoned puncture wound.",
-    "time": "9:12 PM",
-    "source": "timeline",
-    "confidence": 0.97
+    "object": "Evelyn exits to the Conservatory to dispose of the poisoned glass vial in a planter. She drops a lace handkerchief.",
+    "time": "21:50",
+    "source": "timeline"
   },
   {
-    "subject": "Professor Adrian Wren",
+    "subject": "Evelyn Vance",
     "relation": "present_at",
-    "object": "Map room",
-    "time": "9:12 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Conservatory",
+    "time": "21:50",
+    "source": "timeline"
   },
   {
-    "subject": "Julian Pike",
-    "relation": "present_at",
-    "object": "Map room",
-    "time": "9:12 PM",
-    "source": "timeline",
-    "confidence": 0.85
-  },
-  {
-    "subject": "T7",
+    "subject": "T07",
     "relation": "timeline_event",
-    "object": "Julian triggers a brief power fluctuation to scramble witness recollection and coverage.",
-    "time": "9:15 PM",
-    "source": "timeline",
-    "confidence": 0.97
+    "object": "Major Sterling enters the library via the French windows. He finds Alistair dead. Instead of calling for help, he steals his own promissory note from the desk.",
+    "time": "22:00",
+    "source": "timeline"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Major Julian Sterling",
     "relation": "present_at",
-    "object": "Basement control panel",
-    "time": "9:15 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Library",
+    "time": "22:00",
+    "source": "timeline"
   },
   {
-    "subject": "T8",
+    "subject": "Sir Alistair Thorne",
+    "relation": "present_at",
+    "object": "Library",
+    "time": "22:00",
+    "source": "timeline"
+  },
+  {
+    "subject": "T08",
     "relation": "timeline_event",
-    "object": "The body is discovered and the estate is locked down.",
-    "time": "9:20 PM",
-    "source": "timeline",
-    "confidence": 0.97
+    "object": "Arthur Penhaligon enters the Breakfast Room and burns the forged ledger pages in the fireplace.",
+    "time": "22:10",
+    "source": "timeline"
   },
   {
-    "subject": "Evelyn Cross",
+    "subject": "Arthur Penhaligon",
     "relation": "present_at",
-    "object": "Map room",
-    "time": "9:20 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Breakfast Room",
+    "time": "22:10",
+    "source": "timeline"
   },
   {
-    "subject": "Miles Dorian",
+    "subject": "T09",
+    "relation": "timeline_event",
+    "object": "A loud crash is heard. The house cat knocks over a Ming vase in the drawing room, creating a distraction.",
+    "time": "22:15",
+    "source": "timeline"
+  },
+  {
+    "subject": "N/A",
     "relation": "present_at",
-    "object": "Map room",
-    "time": "9:20 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Drawing Room",
+    "time": "22:15",
+    "source": "timeline"
   },
   {
-    "subject": "Nora Bell",
+    "subject": "T10",
+    "relation": "timeline_event",
+    "object": "Evelyn Vance returns to the Ballroom, appearing calm and joining the remaining guests for late tea.",
+    "time": "22:45",
+    "source": "timeline"
+  },
+  {
+    "subject": "Evelyn Vance",
     "relation": "present_at",
-    "object": "Map room",
-    "time": "9:20 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Ballroom",
+    "time": "22:45",
+    "source": "timeline"
   },
   {
-    "subject": "Julian Pike",
+    "subject": "Eleanor Thorne",
     "relation": "present_at",
-    "object": "Map room",
-    "time": "9:20 PM",
-    "source": "timeline",
-    "confidence": 0.85
+    "object": "Ballroom",
+    "time": "22:45",
+    "source": "timeline"
   },
   {
-    "subject": "E1",
+    "subject": "T11",
+    "relation": "timeline_event",
+    "object": "Parker the Butler enters the library to check on the fire and discovers Sir Alistair's body.",
+    "time": "23:00",
+    "source": "timeline"
+  },
+  {
+    "subject": "Parker the Butler",
+    "relation": "present_at",
+    "object": "Library",
+    "time": "23:00",
+    "source": "timeline"
+  },
+  {
+    "subject": "Sir Alistair Thorne",
+    "relation": "present_at",
+    "object": "Library",
+    "time": "23:00",
+    "source": "timeline"
+  },
+  {
+    "subject": "E01",
     "relation": "is_evidence",
-    "object": "Cracked teacup",
+    "object": "Half-empty Port Glass",
     "time": null,
-    "source": "evidence",
-    "confidence": 1.0
+    "source": "evidence"
   },
   {
-    "subject": "E1",
+    "subject": "E01",
     "relation": "found_at",
-    "object": "Lecture antechamber",
+    "object": "Library Desk",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.75
+    "source": "evidence"
   },
   {
-    "subject": "E1",
+    "subject": "E01",
     "relation": "implicates",
-    "object": "Nora Bell",
+    "object": "Evelyn Vance",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.75
+    "source": "evidence"
   },
   {
-    "subject": "E1",
+    "subject": "E01",
     "relation": "description",
-    "object": "A teacup bearing Nora's fingerprints but no poison residue.",
+    "object": "The glass on the desk. It contains traces of potassium cyanide and smells faintly of bitter almonds.",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.75
+    "source": "evidence"
   },
   {
-    "subject": "E2",
+    "subject": "E02",
     "relation": "is_evidence",
-    "object": "Deleted security segment",
+    "object": "Charred Ledger Fragment",
     "time": null,
-    "source": "evidence",
-    "confidence": 1.0
+    "source": "evidence"
   },
   {
-    "subject": "E2",
+    "subject": "E02",
     "relation": "found_at",
-    "object": "Security office",
+    "object": "Breakfast Room Fireplace",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.98
+    "source": "evidence"
   },
   {
-    "subject": "E2",
+    "subject": "E02",
     "relation": "implicates",
-    "object": "Julian Pike",
+    "object": "Arthur Penhaligon",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.98
+    "source": "evidence"
   },
   {
-    "subject": "E2",
+    "subject": "E02",
     "relation": "description",
-    "object": "A seven-minute gap in east corridor footage manually triggered from the security desk.",
+    "object": "A corner of a page from the estate accounts showing Arthur Penhaligon\u2019s signature next to an altered figure.",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.98
+    "source": "evidence"
   },
   {
-    "subject": "E3",
+    "subject": "E03",
     "relation": "is_evidence",
-    "object": "Digitalis trace",
+    "object": "Lace Handkerchief",
     "time": null,
-    "source": "evidence",
-    "confidence": 1.0
+    "source": "evidence"
   },
   {
-    "subject": "E3",
+    "subject": "E03",
     "relation": "found_at",
-    "object": "Victim's clothing",
+    "object": "Conservatory",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.94
+    "source": "evidence"
   },
   {
-    "subject": "E3",
+    "subject": "E03",
     "relation": "implicates",
-    "object": "Julian Pike",
+    "object": "Evelyn Vance",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.94
+    "source": "evidence"
   },
   {
-    "subject": "E3",
+    "subject": "E03",
     "relation": "description",
-    "object": "A toxicology trace on the victim's collar consistent with digitalis delivery by puncture.",
+    "object": "A fine lace handkerchief embroidered with 'E.V.' stained with potting soil and lily pollen.",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.94
+    "source": "evidence"
   },
   {
-    "subject": "E4",
+    "subject": "E04",
     "relation": "is_evidence",
-    "object": "Missing display spike",
+    "object": "The Promissory Note",
     "time": null,
-    "source": "evidence",
-    "confidence": 1.0
+    "source": "evidence"
   },
   {
-    "subject": "E4",
+    "subject": "E04",
     "relation": "found_at",
-    "object": "Map room display",
+    "object": "Guest Wing (Sterling's Room)",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.88
+    "source": "evidence"
   },
   {
-    "subject": "E4",
+    "subject": "E04",
     "relation": "implicates",
-    "object": "Julian Pike",
+    "object": "Major Julian Sterling",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.88
+    "source": "evidence"
   },
   {
-    "subject": "E4",
+    "subject": "E04",
     "relation": "description",
-    "object": "A display label from an antique navigation spike case now missing one item.",
+    "object": "A document signed by Major Sterling for five thousand pounds, found hidden in his boot.",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.88
+    "source": "evidence"
   },
   {
-    "subject": "E5",
+    "subject": "E05",
     "relation": "is_evidence",
-    "object": "Burned ledger scrap",
+    "object": "Empty Amber Vial",
     "time": null,
-    "source": "evidence",
-    "confidence": 1.0
+    "source": "evidence"
   },
   {
-    "subject": "E5",
+    "subject": "E05",
     "relation": "found_at",
-    "object": "Fireplace grate",
+    "object": "Conservatory",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.67
+    "source": "evidence"
   },
   {
-    "subject": "E5",
+    "subject": "E05",
     "relation": "implicates",
-    "object": "Evelyn Cross",
+    "object": "Evelyn Vance",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.67
+    "source": "evidence"
   },
   {
-    "subject": "E5",
+    "subject": "E05",
     "relation": "description",
-    "object": "A scrap from the retreat accounts suggesting Evelyn hid expenses.",
+    "object": "A small glass vial labeled 'Digitalis Extract' but containing traces of cyanide. Hidden in the soil of a potted fern.",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.67
+    "source": "evidence"
   },
   {
-    "subject": "E6",
+    "subject": "E06",
     "relation": "is_evidence",
-    "object": "Unsigned apology draft",
+    "object": "Torn Silk Scantling",
     "time": null,
-    "source": "evidence",
-    "confidence": 1.0
+    "source": "evidence"
   },
   {
-    "subject": "E6",
+    "subject": "E06",
     "relation": "found_at",
-    "object": "Observatory desk",
+    "object": "Library Door Latch",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.71
+    "source": "evidence"
   },
   {
-    "subject": "E6",
+    "subject": "E06",
     "relation": "implicates",
-    "object": "Miles Dorian",
+    "object": "Evelyn Vance",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.71
+    "source": "evidence"
   },
   {
-    "subject": "E6",
+    "subject": "E06",
     "relation": "description",
-    "object": "A draft apology in Miles's notebook after the victim threatened exposure.",
+    "object": "A small triangular piece of colorful silk matching the Harlequin costume worn by Evelyn.",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.71
+    "source": "evidence"
   },
   {
-    "subject": "E7",
+    "subject": "E07",
     "relation": "is_evidence",
-    "object": "Basement boot print",
+    "object": "Wet Size 5 Footprint",
     "time": null,
-    "source": "evidence",
-    "confidence": 1.0
+    "source": "evidence"
   },
   {
-    "subject": "E7",
+    "subject": "E07",
     "relation": "found_at",
-    "object": "Basement corridor",
+    "object": "Library Entrance",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.91
+    "source": "evidence"
   },
   {
-    "subject": "E7",
+    "subject": "E07",
     "relation": "implicates",
-    "object": "Julian Pike",
+    "object": "Evelyn Vance",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.91
+    "source": "evidence"
   },
   {
-    "subject": "E7",
+    "subject": "E07",
     "relation": "description",
-    "object": "Wet tread marks matching Julian's boots lead from the control panel toward the east stair.",
+    "object": "A small, feminine mud print near the servant's entrance to the library.",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.91
+    "source": "evidence"
   },
   {
-    "subject": "E8",
+    "subject": "E08",
     "relation": "is_evidence",
-    "object": "Phone message extract",
+    "object": "Botanical Journal",
     "time": null,
-    "source": "evidence",
-    "confidence": 1.0
+    "source": "evidence"
   },
   {
-    "subject": "E8",
+    "subject": "E08",
     "relation": "found_at",
-    "object": "Victim's phone",
+    "object": "Evelyn's Luggage",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.97
+    "source": "evidence"
   },
   {
-    "subject": "E8",
+    "subject": "E08",
     "relation": "implicates",
-    "object": "Julian Pike",
+    "object": "Evelyn Vance",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.97
+    "source": "evidence"
   },
   {
-    "subject": "E8",
+    "subject": "E08",
     "relation": "description",
-    "object": "A recovered message summoning the victim to the map room from Julian's device.",
+    "object": "A notebook detailing the extraction methods for various alkaloids, including a handwritten note on 'The Swiftness of Cyanide'.",
     "time": null,
-    "source": "evidence",
-    "confidence": 0.97
+    "source": "evidence"
   },
   {
-    "subject": "E9",
-    "relation": "is_evidence",
-    "object": "Cut generator wire",
-    "time": null,
-    "source": "evidence",
-    "confidence": 1.0
-  },
-  {
-    "subject": "E9",
-    "relation": "found_at",
-    "object": "Generator housing",
-    "time": null,
-    "source": "evidence",
-    "confidence": 0.89
-  },
-  {
-    "subject": "E9",
-    "relation": "implicates",
-    "object": "Julian Pike",
-    "time": null,
-    "source": "evidence",
-    "confidence": 0.89
-  },
-  {
-    "subject": "E9",
-    "relation": "description",
-    "object": "A deliberately nicked wire that caused the brief outage used to support Julian's alibi.",
-    "time": null,
-    "source": "evidence",
-    "confidence": 0.89
-  },
-  {
-    "subject": "Nora Bell",
+    "subject": "Arthur Penhaligon",
     "relation": "red_herring_explained_by",
-    "object": "Nora appears suspicious because she served the victim's tea, but the poison was not ingested.",
+    "object": "The burned ledger makes Arthur look like he killed Alistair to hide his theft. In reality, he only stole the ledger and burned it after he found the body was already cold, taking advantage of the situation.",
     "time": null,
-    "source": "red_herring",
-    "confidence": 0.82
+    "source": "red_herring"
   },
   {
-    "subject": "Evelyn Cross",
+    "subject": "Major Julian Sterling",
     "relation": "red_herring_explained_by",
-    "object": "Evelyn hid financial fraud, giving her motive to lie, but that misconduct is separate from the murder.",
+    "object": "Sterling\u2019s possession of the note and his presence in the library suggest he is the killer. However, he entered through the windows after the poison had already taken effect, intending to commit a robbery, not a murder.",
     "time": null,
-    "source": "red_herring",
-    "confidence": 0.82
+    "source": "red_herring"
   }
 ]
